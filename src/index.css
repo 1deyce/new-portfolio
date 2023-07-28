@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+	ul li {
+		@apply relative tracking-[1px];
+	}
+	ul li::after {
+		@apply content-[''] bg-[#007ced] h-[2px] w-[0%] left-0 -bottom-[-25px] rounded-xl absolute duration-500;
+	}
+	ul li:hover::after {
+		@apply w-[100%];
+	}
+}

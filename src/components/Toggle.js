@@ -9,7 +9,7 @@ Sun = Moon = styled.svg`
   right: 4rem;
   transition: all .5s linear;
   margin-right: 4rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.5rem;
 `;
 
 export const Toggle = ({ theme, toggleTheme }) => {

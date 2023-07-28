@@ -12,11 +12,9 @@ export const GlobalStyles = createGlobalStyle`
 export const lightTheme = {
   body: '#fff',
   text: '#000',
-  primary: '#6200ee',
 };
 
 export const darkTheme = {
   body: '#000',
   text: '#fff',
-  primary: '#bb86fc',
 };
