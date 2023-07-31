@@ -7,7 +7,7 @@ const Hero = () => {
         <section className='bg-white dark:bg-black pt-0' id='about'>
             <div className='container pt-14'>
                 <div className='md:block items-center justify-between sm:flex-col md:flex-row'>
-                    {/* hero left content */}
+                    {/* hero left start */}
                     <div className='w-full md:basis-1/2'>
                         <h5
                             data-aos='fade-right'
@@ -35,7 +35,7 @@ const Hero = () => {
                         className='flex items-center gap-6 mt-7'
                     >
                         <a href="#contact">
-                            <button className='bg-primaryColor text-white font-[500] flex items-center gap-2 hover:bg-black hover:dark:bg-white hover:dark:text-black ease-in duration-300 py-2 px-3 rounded-[10px]'>
+                            <button className='bg-primaryColor text-white font-[500] flex items-center gap-2 hover:bg-black hover:dark:bg-white hover:dark:text-black py-2 px-3 rounded-[10px] transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-secondaryColor duration-500'>
                                 <i class="ri-mail-line"></i> Hire Me
                             </button>
                         </a>
@@ -66,9 +66,58 @@ const Hero = () => {
                             min={80}
                             ideal={100}
                             max={200}
-                            readMoreText={<span className="text-primaryColor">read more...</span>}
+                            readMoreText={<span className="text-primaryColor cursor-pointer">read more...</span>}
                         />
                     </p>
+                    
+                    <div className="flex items-center gap-9 mt-14">
+                        <span className='text-smallTextColor dark:text-white text-[15px] font-[500]'>
+                            Find me here:
+                        </span>
+                        <span className='animate-bounce'>
+                            <a
+                                title='LinkedIn'
+                                href="https://www.linkedin.com/in/keenan-deyce-5b9ab3219/"
+                                className='text-secondaryColor dark:text-primaryColor text-[20px] font-[500]'
+                            >
+                                <i class="ri-linkedin-line"></i>
+                            </a>
+                        </span>
+                        <span className='animate-bounce'>
+                            <a
+                                title='GitHub'
+                                href="https://github.com/1deyce"
+                                className='text-secondaryColor dark:text-primaryColor text-[20px] font-[500]'
+                            >
+                                <i class="ri-github-fill"></i>
+                            </a>
+                        </span>
+                    </div>
+                    {/* Hero left end */}
+                </div>
+
+                <div className='flex justify-start drop-shadow-[0_10px_10px_rgba(0,0,0,5)]'>
+                    <div className='bg-secondaryColor dark:bg-primaryColor w-auto h-[200px] mt-20 rounded-[30px]'>
+                        <p className='text-white px-10 py-10'>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi sed laborum fugiat repellat modi quisquam obcaecati inventore ratione incidunt ut, explicabo nemo veritatis earum sunt pariatur consequatur praesentium repellendus, ex qui? Doloremque ea quas et natus molestiae ad quam voluptatem libero asperiores sunt, similique nesciunt fugiat fuga ducimus esse mollitia!
+                        </p>
+                    </div>
+                </div>
+
+                <div className='flex justify-start drop-shadow-[0_10px_10px_rgba(0,0,0,5)]'>
+                    <div className='bg-primaryColor dark:bg-secondaryColor w-auto h-[200px] mt-10 rounded-[30px]'>
+                        <p className='text-white px-10 py-10'>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi sed laborum fugiat repellat modi quisquam obcaecati inventore ratione incidunt ut, explicabo nemo veritatis earum sunt pariatur consequatur praesentium repellendus, ex qui? Doloremque ea quas et natus molestiae ad quam voluptatem libero asperiores sunt, similique nesciunt fugiat fuga ducimus esse mollitia!
+                        </p>
+                    </div>
+                </div>
+                
+                <div className='flex justify-start drop-shadow-[0_10px_10px_rgba(0,0,0,5)]'>
+                    <div className='bg-secondaryColor dark:bg-primaryColor w-auto h-[200px] mt-10 mb-20 rounded-[30px]'>
+                        <p className='text-white px-10 py-10'>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi sed laborum fugiat repellat modi quisquam obcaecati inventore ratione incidunt ut, explicabo nemo veritatis earum sunt pariatur consequatur praesentium repellendus, ex qui? Doloremque ea quas et natus molestiae ad quam voluptatem libero asperiores sunt, similique nesciunt fugiat fuga ducimus esse mollitia!
+                        </p>
+                    </div> 
                 </div>
             </div>
         </section>

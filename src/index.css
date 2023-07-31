@@ -15,5 +15,5 @@
 }
 
 * {
-	@apply transition-colors duration-700;
+	@apply transition-colors duration-500;
   }
