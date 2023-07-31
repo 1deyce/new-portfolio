@@ -7,6 +7,11 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Urbanist', sans-serif;
     transition: all .5s linear;
   }
+
+  :root {
+    --bg-color: ${({ theme }) => theme.body};
+    --text-color: ${({ theme }) => theme.text};
+  }
 `;
 
 export const lightTheme = {
