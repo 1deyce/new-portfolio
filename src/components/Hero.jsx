@@ -41,7 +41,7 @@ const Hero = () => {
                         </a>
                         <a
                             href="#portfolio"
-                            className='text-smallTextColor dark:text-primaryColor font-[600] text-[16px] border-b border-solid border-primaryColor dark:border-white hover:dark:text-primaryColor'
+                            className='text-black dark:text-primaryColor font-[600] text-[16px] border-b border-solid border-primaryColor dark:border-white hover:dark:text-primaryColor'
                         >
                             See portfolio
                         </a>
@@ -95,30 +95,30 @@ const Hero = () => {
                     </div>
                     {/* Hero left end */}
                 </div>
+                
+                {/* Experience start */}
+                <div className='flex justify-start drop-shadow-[0_10px_10px_rgba(0,0,0,5)]'>
+                    <div className='bg-secondaryColor dark:bg-primaryColor w-auto h-[200px] mt-20 rounded-[30px]'>
+                        <h1 className='text-white px-10 pt-8 font-[700] text-2xl border-b-2 border-solid border-white border-w-full dark:border-white'>
+                            Education
+                        </h1>
+                        <p className='text-white px-10 pt-3'>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi sed laborum fugiat repellat modi quisquam obcaecati inventore ratione incidunt ut, explicabo nemo veritatis earum sunt pariatur consequatur praesentium repellendus, ex qui? Doloremque ea quas et natus molestiae ad quam voluptatem libero asperiores sunt, similique nesciunt fugiat fuga ducimus esse mollitia!
+                        </p>
+                    </div>
+                </div>
 
                 <div className='flex justify-start drop-shadow-[0_10px_10px_rgba(0,0,0,5)]'>
                     <div className='bg-secondaryColor dark:bg-primaryColor w-auto h-[200px] mt-20 rounded-[30px]'>
-                        <p className='text-white px-10 py-10'>
+                        <h1 className='text-white px-10 pt-8 font-[700] text-2xl'>
+                            Experience
+                        </h1>
+                        <p className='text-white px-10 py-3'>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi sed laborum fugiat repellat modi quisquam obcaecati inventore ratione incidunt ut, explicabo nemo veritatis earum sunt pariatur consequatur praesentium repellendus, ex qui? Doloremque ea quas et natus molestiae ad quam voluptatem libero asperiores sunt, similique nesciunt fugiat fuga ducimus esse mollitia!
                         </p>
                     </div>
                 </div>
-
-                <div className='flex justify-start drop-shadow-[0_10px_10px_rgba(0,0,0,5)]'>
-                    <div className='bg-primaryColor dark:bg-secondaryColor w-auto h-[200px] mt-10 rounded-[30px]'>
-                        <p className='text-white px-10 py-10'>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi sed laborum fugiat repellat modi quisquam obcaecati inventore ratione incidunt ut, explicabo nemo veritatis earum sunt pariatur consequatur praesentium repellendus, ex qui? Doloremque ea quas et natus molestiae ad quam voluptatem libero asperiores sunt, similique nesciunt fugiat fuga ducimus esse mollitia!
-                        </p>
-                    </div>
-                </div>
-                
-                <div className='flex justify-start drop-shadow-[0_10px_10px_rgba(0,0,0,5)]'>
-                    <div className='bg-secondaryColor dark:bg-primaryColor w-auto h-[200px] mt-10 mb-20 rounded-[30px]'>
-                        <p className='text-white px-10 py-10'>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi sed laborum fugiat repellat modi quisquam obcaecati inventore ratione incidunt ut, explicabo nemo veritatis earum sunt pariatur consequatur praesentium repellendus, ex qui? Doloremque ea quas et natus molestiae ad quam voluptatem libero asperiores sunt, similique nesciunt fugiat fuga ducimus esse mollitia!
-                        </p>
-                    </div> 
-                </div>
+                {/* Experience end */}
             </div>
         </section>
     )
