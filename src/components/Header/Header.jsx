@@ -1,14 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import "../../index.css";
 import "../../App.css";
-// import { Toggle } from "../Toggle";
-// import { useDarkMode } from '../../styles/useDarkMode';
-// import { GlobalStyles } from '../../styles/globalStyles';  
 
 const Header = () => {
-    // const [ theme, toggleTheme ] = useDarkMode();
-    // const themeMode = theme === 'light' ? lightTheme : darkTheme;
-
     const [theme, setTheme] = useState("null");
 
     useEffect(() => {

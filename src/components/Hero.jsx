@@ -7,7 +7,7 @@ const Hero = () => {
         <section className='bg-white dark:bg-black pt-0' id='about'>
             <div className='container pt-14'>
                 <div className='md:block items-center justify-between sm:flex-col md:flex-row'>
-                    {/* ========== hero left content ========== */}
+                    {/* hero left content */}
                     <div className='w-full md:basis-1/2'>
                         <h5
                             data-aos='fade-right'
