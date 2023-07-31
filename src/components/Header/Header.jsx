@@ -1,7 +1,6 @@
 import React from 'react';
 import "../../index.css";
 import "../../App.css";
-// import logo1 from "../../assets/images/logo (2).png";
 import { Toggle } from "../../components/Toggle";
 import { useDarkMode } from '../../styles/useDarkMode';
 import { GlobalStyles, lightTheme, darkTheme } from '../../styles/globalStyles';
@@ -17,15 +16,15 @@ const Header = () => {
                     <div className='flex items-center justify-between'>
                         {/* logo start */}
                         <div className='flex items-center gap-[10]'>
-                            <span className='w-[50px] h-[50px] text-white text-[30px] font-[500] bg-primaryColor rounded-full flex items-center text-center justify-center cursor-pointer border-black border-2'>
+                            <span className='w-[50px] h-[50px] text-black text-[30px] font-[500] bg-primaryColor rounded-full flex items-center text-center justify-center cursor-pointer border-black border-2'>
                                 K
                             </span>
                             <div className='leading-[20px] pl-2'>
-                                <h2 className='text-xl text-primaryColor font-extrabold'>
+                                <h2 className='text-xl text-black font-[600]'>
                                     Keenan Deyce
                                 </h2>
-                                <p className='text-[14px] font-[500] text-black'>
-                                    Personal
+                                <p className='text-[14px] font-[600] text-primaryColor'>
+                                    Portfolio
                                 </p>
                             </div>
                         </div>
