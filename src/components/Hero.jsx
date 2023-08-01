@@ -2,6 +2,7 @@ import React from 'react';
 import 'remixicon/fonts/remixicon.css';
 import ReadMoreReact from 'read-more-react';
 
+
 const Hero = () => {
     return (
         <section className='bg-white dark:bg-black pt-0' id='about'>
@@ -35,7 +36,7 @@ const Hero = () => {
                         className='flex items-center gap-6 mt-7'
                     >
                         <a href="#contact">
-                            <button className='bg-primaryColor text-white font-[500] flex items-center gap-2 hover:bg-black hover:dark:bg-white hover:dark:text-black py-2 px-3 rounded-[10px] transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-secondaryColor duration-500'>
+                            <button className='bg-primaryColor text-white font-[500] flex items-center gap-2 hover:dark:bg-white hover:dark:text-black py-2 px-3 rounded-[10px] transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-secondaryColor duration-500'>
                                 <i class="ri-mail-line"></i> Hire Me
                             </button>
                         </a>
@@ -50,7 +51,7 @@ const Hero = () => {
                     <p
                         data-aos='fade-left'
                         data-aos-duration='1500'
-                        className='flex max-w-2xl gap-2 text-black dark:text-white mt-12 font-[500] text-[15px] leading-7 sm:pl-14 sm:pr-10 whitespace-pre-line'
+                        className='flex max-w-2xl gap-2 text-secondaryColor dark:text-white mt-12 font-[500] text-[15px] leading-7 sm:pl-14 sm:pr-10 whitespace-pre-line'
                     >
                         <span className='text-primaryColor'>
                             <i class="ri-apps-2-line"></i>
@@ -96,29 +97,29 @@ const Hero = () => {
                     {/* Hero left end */}
                 </div>
                 
-                {/* Experience start */}
-                <div className='flex justify-start drop-shadow-[0_10px_10px_rgba(0,0,0,5)]'>
-                    <div className='bg-secondaryColor dark:bg-primaryColor w-auto h-[200px] mt-20 rounded-[30px]'>
-                        <h1 className='text-white px-10 pt-8 font-[700] text-2xl border-b-2 border-solid border-white border-w-full dark:border-white'>
-                            Education
-                        </h1>
-                        <p className='text-white px-10 pt-3'>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi sed laborum fugiat repellat modi quisquam obcaecati inventore ratione incidunt ut, explicabo nemo veritatis earum sunt pariatur consequatur praesentium repellendus, ex qui? Doloremque ea quas et natus molestiae ad quam voluptatem libero asperiores sunt, similique nesciunt fugiat fuga ducimus esse mollitia!
-                        </p>
+                    {/* Exp/Edu start */}
+                    <div className='flex justify-start drop-shadow-[0_10px_10px_rgba(0,0,0,.5)] dark:drop-shadow-[0_10px_10px_rgba(255,255,255,.2)] transform transition ease-in duration-500 hover:scale-110'>
+                        <div className='bg-secondaryColor dark:bg-primaryColor w-auto h-[200px] mt-20 rounded-[30px] cursor-pointer'>
+                            <h1 className='text-white px-10 pt-8 font-[700] text-3xl'>
+                                Education
+                            </h1>
+                            <p className='text-white px-10 pt-3 font-[300]'>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi sed laborum fugiat repellat modi quisquam obcaecati inventore ratione incidunt ut, explicabo nemo veritatis earum sunt pariatur consequatur praesentium repellendus, ex qui? Doloremque ea quas et natus molestiae ad quam voluptatem libero asperiores sunt, similique nesciunt fugiat fuga ducimus esse mollitia!
+                            </p>
+                        </div>
                     </div>
-                </div>
 
-                <div className='flex justify-start drop-shadow-[0_10px_10px_rgba(0,0,0,5)]'>
-                    <div className='bg-secondaryColor dark:bg-primaryColor w-auto h-[200px] mt-20 rounded-[30px]'>
-                        <h1 className='text-white px-10 pt-8 font-[700] text-2xl'>
-                            Experience
-                        </h1>
-                        <p className='text-white px-10 py-3'>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi sed laborum fugiat repellat modi quisquam obcaecati inventore ratione incidunt ut, explicabo nemo veritatis earum sunt pariatur consequatur praesentium repellendus, ex qui? Doloremque ea quas et natus molestiae ad quam voluptatem libero asperiores sunt, similique nesciunt fugiat fuga ducimus esse mollitia!
-                        </p>
+                    <div className='flex justify-start drop-shadow-[0_10px_10px_rgba(0,0,0,.5)] dark:drop-shadow-[0_10px_10px_rgba(255,255,255,.2)] transform transition ease-in duration-500 hover:scale-110'>
+                        <div className='bg-secondaryColor dark:bg-primaryColor w-auto h-[200px] mt-20 rounded-[30px] cursor-pointer'>
+                            <h1 className='text-white px-10 pt-8 font-[700] text-3xl'>
+                                Experience
+                            </h1>
+                            <p className='text-white px-10 py-3 font-[300]'>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi sed laborum fugiat repellat modi quisquam obcaecati inventore ratione incidunt ut, explicabo nemo veritatis earum sunt pariatur consequatur praesentium repellendus, ex qui? Doloremque ea quas et natus molestiae ad quam voluptatem libero asperiores sunt, similique nesciunt fugiat fuga ducimus esse mollitia!
+                            </p>
+                        </div>
                     </div>
-                </div>
-                {/* Experience end */}
+                    {/* Exp/Edu end */}
             </div>
         </section>
     )

@@ -55,7 +55,7 @@ body {
 }
 
 
-/* Dark Mode Toggle */
+/* Dark Mode Toggle start */
 .switch {
   font-size: 17px;
   position: relative;
@@ -63,7 +63,6 @@ body {
   width: 64px;
   height: 35px;
   margin-bottom: 3px;
-  margin-right: 10px;
   transition-delay: 0.5s;
 }
 
@@ -176,4 +175,12 @@ body {
   100% {
     transform: rotate(0deg);
   }
+}
+
+/* Dark Mode Toggle end */
+
+
+/* pre-loader css */
+.loader-wrapper {
+  background-color: black;
 }
