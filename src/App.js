@@ -16,7 +16,7 @@ function App() {
     
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2500); // value of delay length in ms.
+    }, 2700); // value of delay length in ms.
     
     return () => clearTimeout(timer);
   }, []);

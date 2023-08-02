@@ -10,6 +10,7 @@
 body {
   font-family: "Urbanist", sans-serif;
   background: #fff;
+  overflow-x: hidden;
 }
   
 .container {
