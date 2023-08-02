@@ -7,7 +7,7 @@
 		@apply relative tracking-[1px];
 	}
 	ul li::after {
-		@apply content-[''] bg-[#007ced] h-[2px] w-[0%] left-0 -bottom-[-25px] rounded-xl absolute duration-300;
+		@apply content-[''] bg-[#007ced] h-[2px] w-[0%] left-0 -bottom-[-28px] rounded-full absolute duration-700;
 	}
 	ul li:hover::after {
 		@apply w-[100%];
@@ -15,5 +15,5 @@
 }
 
 * {
-	@apply transition-colors duration-500;
+	@apply transition-colors duration-300;
   }

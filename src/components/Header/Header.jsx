@@ -82,7 +82,13 @@ const Header = () => {
                         <input type="checkbox" class="input" onChange={handleThemeSwitch} />
                         <span class="slider"></span>
                     </label>
-                    {/* nav right end */}
+                    {/* menu */}
+                    <span 
+                        // onClick={toggleMenu} 
+                        className='text-2xl text-smallTextColor dark:text-white md:hidden cursor-pointer'
+                    >
+                        <i class="ri-menu-line"></i>
+                    </span>
                 </div>
             </div>
         </header>

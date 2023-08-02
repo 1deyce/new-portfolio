@@ -1,6 +1,8 @@
 import React from 'react';
 import 'remixicon/fonts/remixicon.css';
+import 'aos/dist/aos.css';
 import ReadMoreReact from 'read-more-react';
+
 
 
 const Hero = () => {
@@ -97,29 +99,7 @@ const Hero = () => {
                     {/* Hero left end */}
                 </div>
                 
-                    {/* Exp/Edu start */}
-                    <div className='flex justify-start drop-shadow-[0_10px_10px_rgba(0,0,0,.5)] dark:drop-shadow-[0_10px_10px_rgba(255,255,255,.2)] transform transition ease-in duration-500 hover:scale-110'>
-                        <div className='bg-secondaryColor dark:bg-primaryColor w-auto h-[200px] mt-20 rounded-[30px] cursor-pointer'>
-                            <h1 className='text-white px-10 pt-8 font-[700] text-3xl'>
-                                Education
-                            </h1>
-                            <p className='text-white px-10 pt-3 font-[300]'>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi sed laborum fugiat repellat modi quisquam obcaecati inventore ratione incidunt ut, explicabo nemo veritatis earum sunt pariatur consequatur praesentium repellendus, ex qui? Doloremque ea quas et natus molestiae ad quam voluptatem libero asperiores sunt, similique nesciunt fugiat fuga ducimus esse mollitia!
-                            </p>
-                        </div>
-                    </div>
 
-                    <div className='flex justify-start drop-shadow-[0_10px_10px_rgba(0,0,0,.5)] dark:drop-shadow-[0_10px_10px_rgba(255,255,255,.2)] transform transition ease-in duration-500 hover:scale-110'>
-                        <div className='bg-secondaryColor dark:bg-primaryColor w-auto h-[200px] mt-20 rounded-[30px] cursor-pointer'>
-                            <h1 className='text-white px-10 pt-8 font-[700] text-3xl'>
-                                Experience
-                            </h1>
-                            <p className='text-white px-10 py-3 font-[300]'>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi sed laborum fugiat repellat modi quisquam obcaecati inventore ratione incidunt ut, explicabo nemo veritatis earum sunt pariatur consequatur praesentium repellendus, ex qui? Doloremque ea quas et natus molestiae ad quam voluptatem libero asperiores sunt, similique nesciunt fugiat fuga ducimus esse mollitia!
-                            </p>
-                        </div>
-                    </div>
-                    {/* Exp/Edu end */}
             </div>
         </section>
     )

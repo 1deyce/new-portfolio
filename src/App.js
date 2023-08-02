@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import Header from './components/Header/Header.jsx';
-import Hero from './components/Hero.jsx';
+import Hero from './components/UI/Hero.jsx';
+import About from './components/UI/About.jsx';
+import Services from './components/UI/Services.jsx';
 import "./App.css";
 import Aos from 'aos';
 import { Triangle } from 'react-loader-spinner';
@@ -14,7 +16,7 @@ function App() {
     
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000); // value of delay length in ms.
+    }, 2500); // value of delay length in ms.
     
     return () => clearTimeout(timer);
   }, []);
@@ -37,6 +39,8 @@ function App() {
         <div>
           <Header />
           <Hero />
+          <About />
+          <Services/>
         </div>
       )}
     </div>
