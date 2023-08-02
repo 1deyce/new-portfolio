@@ -11,10 +11,10 @@ const Services = () => {
                         </span>
                     </h2>
                     <p 
-                        className="lg:max-w-[1000px] lg:mx-auto text-headingColor dark:text-white font-[500] text-[16px] leading-7"
+                        className="lg:max-w-[1000px] lg:mx-auto text-headingColor dark:text-white font-[500] text-[16px] leading-7 pt-6"
                     >
                         I create visually appealing, user-friendly websites that deliver an exceptional online presence for your business. Using the latest web technologies and frameworks, I can develop responsive websites that are optimized for speed, performance, and search engine visibility. <br />
-                        From informational websites to e-commerce platforms, I can build a solution that helps you connect with your target audience and achieve your online goals. With Flask and Node.js, I can design and develop a scalable and efficient backend architecture for your app.. 
+                        From informational websites to e-commerce platforms, I can build a solution that helps you connect with your target audience and achieve your online goals.
                     </p>
                 </div>
                 <div className="flex justify-around sm:py-12">
