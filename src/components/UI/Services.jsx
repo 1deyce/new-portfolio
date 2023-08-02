@@ -26,7 +26,7 @@ const Services = () => {
                         <div
                             data-aos="fade-right"
                             dat-aos-duration="1200"
-                            className="bg-white dark:bg-black hover:dark:bg-primaryColor p-4 rounded group hover:bg-primaryColor cursor-pointer ease-in duration-150 shadow-lg h-full"
+                            className="bg-white dark:bg-black hover:dark:bg-primaryColor p-4 rounded-xl group hover:bg-primaryColor cursor-pointer ease-in duration-150 h-full"
                         >
                             <h3 className="text-primaryColor font-[700] mb-2 mt-1 group-hover:text-white dark:group-hover:text-black group-hover:font-[600] text-xl text-center">Frontend Development</h3>
                             <p className="text-[15px] text-smallTextColor dark:text-white group-hover:text-white dark:group-hover:text-white group-hover:font-[500] leading-7 text-center">
@@ -40,10 +40,10 @@ const Services = () => {
                         <div
                             data-aos="fade-up"
                             dat-aos-duration="1200"
-                            className="bg-white dark:bg-black hover:dark:bg-primaryColor p-4 rounded group hover:bg-primaryColor cursor-pointer ease-in duration-150 shadow-lg h-full"
+                            className="bg-secondaryColor dark:bg-white p-4 rounded-xl group cursor-pointer ease-in duration-150 h-full"
                         >
-                            <h3 className="text-primaryColor font-[700] mb-2 mt-1 group-hover:text-white dark:group-hover:text-black group-hover:font-[600] text-xl text-center">UI/UX Design</h3>
-                            <p className="text-[15px] text-smallTextColor dark:text-white group-hover:text-white dark:group-hover:text-white group-hover:font-[500] leading-7 text-center">
+                            <h3 className="text-white dark:text-secondaryColor font-[700] mb-2 mt-1 group-hover:text-white dark:group-hover:text-secondaryColor group-hover:font-[600] text-xl text-center">UI/UX Design</h3>
+                            <p className="text-[15px] text-white dark:text-secondaryColor group-hover:text-white dark:group-hover:text-secondaryColor group-hover:font-[500] leading-7 text-center">
                             Using modern HTML, CSS, and JavaScript frameworks, I can transform your design concepts into interactive and intuitive interfaces that captivate users and enhance their interaction with your digital products.
                             </p>
                         </div>
@@ -54,7 +54,7 @@ const Services = () => {
                         <div
                             data-aos="fade-left"
                             dat-aos-duration="1200"
-                            className="bg-white dark:bg-black hover:dark:bg-primaryColor p-4 rounded group hover:bg-primaryColor cursor-pointer ease-in duration-150 shadow-lg h-full"
+                            className="bg-white dark:bg-black hover:dark:bg-primaryColor p-4 rounded-xl group hover:bg-primaryColor cursor-pointer ease-in duration-150 h-full"
                         >
                             <h3 className="text-primaryColor font-[700] mb-2 mt-1 group-hover:text-white dark:group-hover:text-black group-hover:font-[600] text-xl text-center">Backend Development</h3>
                             <p className="text-[15px] text-smallTextColor dark:text-white group-hover:text-white dark:group-hover:text-white group-hover:font-[500] leading-7 text-center">
