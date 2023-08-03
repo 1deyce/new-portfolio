@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600;700;800&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
   
 
@@ -185,3 +185,23 @@ body {
 .loader-wrapper {
   background-color: black;
 }
+
+
+/* carousel styles */
+@keyframes scroll {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.animate {
+  animation: scroll 15s linear infinite;
+}
+
+.animate:hover {
+  animation-play-state: paused;
+}
+

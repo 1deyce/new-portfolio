@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import "./App.css";
+import { Triangle } from 'react-loader-spinner';
 import Header from './components/Header/Header.jsx';
 import Hero from './components/UI/Hero.jsx';
 import About from './components/UI/About.jsx';
 import Services from './components/UI/Services.jsx';
-import "./App.css";
-import Aos from 'aos';
-import { Triangle } from 'react-loader-spinner';
 
 function App() {   
   const [isloading, setIsLoading] = useState(true);

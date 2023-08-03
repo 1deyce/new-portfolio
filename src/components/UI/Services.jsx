@@ -1,6 +1,26 @@
 import React from 'react';
-
+import 'aos/dist/aos.css';
+import "../../App.css";
+import html from "../../assets/images/html-5.png"; 
+import css from "../../assets/images/css-3.png";
+import js from "../../assets/images/js.png";
+import node from "../../assets/images/node-js.png";
+import tailwind from "../../assets/images/tailwind-css.svg";
+import python from "../../assets/images/python.png";
+import react from "../../assets/images/physics.png";
+import figma from "../../assets/images/figma.png";
 const Services = () => {
+    const images = [
+        html,
+        css,
+        js,
+        node,
+        react,
+        tailwind,
+        figma,
+        python
+    ];
+
     return (
         <section id='services' className='bg-white dark:bg-black pt-20'>
             <div className='container lg:pt-5'>
@@ -17,58 +37,89 @@ const Services = () => {
                         From informational websites to e-commerce platforms, I can build a solution that helps you connect with your target audience and achieve your online goals.
                     </p>
                 </div>
-                <div className="flex justify-around sm:py-12">
-                <div className="w-full py-3 sm:max-w-3xl sm:mx-auto sm:px-0">
-                    <div className="relative antialiased text-sm font-semibold">
-                    <div className="mt-6 sm:mt-0 sm:mb-12 flex flex-wrap justify-around">
-                        {/* ========== first card ========== */}
-                        <div className="w-full sm:w-1/3 mb-4 sm:mb-0">
-                        <div
-                            data-aos="fade-right"
-                            dat-aos-duration="1200"
-                            className="bg-white dark:bg-black hover:dark:bg-primaryColor p-4 rounded-xl group hover:bg-primaryColor cursor-pointer ease-in duration-150 h-full"
-                        >
-                            <h3 className="text-primaryColor font-[700] mb-2 mt-1 group-hover:text-white dark:group-hover:text-black group-hover:font-[600] text-xl text-center">Frontend Development</h3>
-                            <p className="text-[15px] text-smallTextColor dark:text-white group-hover:text-white dark:group-hover:text-white group-hover:font-[500] leading-7 text-center">
-                            Using modern HTML, CSS, and JavaScript frameworks, I can transform your design concepts into interactive interfaces that captivate users and enhance their interaction with your digital products.
-                            </p>
-                        </div>
-                        </div>
+                <div className="flex justify-center sm:justify-between sm:py-12">
+                    <div className="w-full py-3 sm:max-w-3xl sm:mx-auto sm:px-0">
+                        <div className="relative antialiased text-sm font-semibold">
+                            <div className="mt-6 sm:mt-0 sm:mb-12 flex flex-wrap justify-between">
+                                {/* ========== first card ========== */}
+                                <div className="w-full sm:w-1/3 mb-4 sm:mb-0 max-w-xs">
+                                    <div
+                                        data-aos="fade-right"
+                                        data-aos-duration="1200"
+                                        className="bg-white dark:bg-black p-4 rounded-xl group cursor-pointer ease-in duration-150 h-full"
+                                    >
+                                        <h3 
+                                            className="text-primaryColor font-[700] mb-2 mt-1 text-xl text-center"
+                                        >
+                                            Frontend Development
+                                        </h3>
+                                        <p 
+                                            className="text-[15px] text-secondaryColor dark:text-white dark:group-hover:text-white leading-7 text-center"
+                                        >
+                                            Using modern HTML, CSS, and JavaScript frameworks, I can transform your design concepts into interactive interfaces that captivate users and enhance their interaction with your digital products.
+                                        </p>
+                                    </div>
+                                </div>
 
-                        {/* ========== second card ========== */}
-                        <div className="w-full sm:w-1/3 mb-4 sm:mb-0">
-                        <div
-                            data-aos="fade-up"
-                            dat-aos-duration="1200"
-                            className="bg-secondaryColor dark:bg-white p-4 rounded-xl group cursor-pointer ease-in duration-150 h-full"
-                        >
-                            <h3 className="text-white dark:text-secondaryColor font-[700] mb-2 mt-1 group-hover:text-white dark:group-hover:text-secondaryColor group-hover:font-[600] text-xl text-center">UI/UX Design</h3>
-                            <p className="text-[15px] text-white dark:text-secondaryColor group-hover:text-white dark:group-hover:text-secondaryColor group-hover:font-[500] leading-7 text-center">
-                            Using modern HTML, CSS, and JavaScript frameworks, I can transform your design concepts into interactive and intuitive interfaces that captivate users and enhance their interaction with your digital products.
-                            </p>
-                        </div>
-                        </div>
+                                {/* ========== second card ========== */}
+                                <div className="w-full sm:w-1/3 mb-4 sm:mb-0 max-w-xs">
+                                    <div
+                                        data-aos="fade-up"
+                                        data-aos-duration="2000"
+                                        className="bg-secondaryColor dark:bg-white p-4 rounded-xl group cursor-pointer ease-in duration-150 h-full"
+                                    >
+                                        <h3 className="text-white dark:text-secondaryColor font-[700] mb-2 mt-1 group-hover:text-white dark:group-hover:text-secondaryColor text-xl text-center">UI/UX Design</h3>
+                                        <p className="text-[15px] text-white dark:text-secondaryColor group-hover:text-white dark:group-hover:text-secondaryColor leading-7 text-center">
+                                        Using Balsamiq and Figma, I create intuitive and visually appealing user interfaces and then translate the design concepts into code, ensuring a seamless and engaging frontend experience for our users.
+                                        </p>
+                                    </div>
+                                </div>
 
-                        {/* ========== third card ========== */}
-                        <div className="w-full sm:w-1/3 mb-4 sm:mb-0">
-                        <div
-                            data-aos="fade-left"
-                            dat-aos-duration="1200"
-                            className="bg-white dark:bg-black hover:dark:bg-primaryColor p-4 rounded-xl group hover:bg-primaryColor cursor-pointer ease-in duration-150 h-full"
-                        >
-                            <h3 className="text-primaryColor font-[700] mb-2 mt-1 group-hover:text-white dark:group-hover:text-black group-hover:font-[600] text-xl text-center">Backend Development</h3>
-                            <p className="text-[15px] text-smallTextColor dark:text-white group-hover:text-white dark:group-hover:text-white group-hover:font-[500] leading-7 text-center">
-                            With expertise in server-side programming languages, databases, and frameworks, I can build robust back-end systems to power your software applications and websites. 
-                            </p>
+                                {/* ========== third card ========== */}
+                                <div className="w-full sm:w-1/3 mb-4 sm:mb-0 max-w-xs">
+                                    <div
+                                        data-aos="fade-left"
+                                        data-aos-duration="1200"
+                                        className="bg-white dark:bg-black p-4 rounded-xl group cursor-pointer ease-in duration-150 h-full"
+                                    >
+                                        <h3 className="text-primaryColor font-[700] mb-2 mt-1 text-xl text-center">Backend Development</h3>
+                                        <p className="text-[15px] text-smallTextColor dark:text-white dark:group-hover:text-white leading-7 text-center">
+                                        With expertise in server-side programming languages, databases, and frameworks, I can build robust back-end systems to power your software applications and websites. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        </div>
-                    </div>
                     </div>
                 </div>
+
+                {/* Infinite Slider */}
+                <div className="flex items-center min-h-[200px] justify-center">
+                    {/* 1 */}
+                    <div className="w-[200%] h-20 border-t border-b border-white dark:border-black overflow-hidden relative animate-infinite-slider">
+                        {/* 2. */}
+                        <div className="w-[200%] flex items-center h-20 justify-around absolute left-0 animate gap-20 animate-infinite-slide">
+                            {/* 3 */}
+                            {images.map((image) => {
+                                return (
+                                <div className="flex justify-center items-start w-[20rem]">
+                                    <img className='h-16 w-16' src={image} alt=''/>
+                                </div>
+                                );
+                            })}
+                            {images.map((image) => {
+                                return (
+                                <div className="flex justify-center items-start w-[20rem]">
+                                    <img className='h-16 w-16' src={image} alt=''/>
+                                </div>
+                                );
+                            })}
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     )
 }
 
-export default Services;    
+export default Services;
