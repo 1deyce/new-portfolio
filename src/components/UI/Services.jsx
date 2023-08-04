@@ -9,6 +9,9 @@ import tailwind from "../../assets/images/tailwind-css.svg";
 import python from "../../assets/images/python.png";
 import react from "../../assets/images/physics.png";
 import figma from "../../assets/images/figma.png";
+import git from "../../assets/images/git.png";
+import github from "../../assets/images/github.png";
+
 const Services = () => {
     const images = [
         html,
@@ -18,7 +21,9 @@ const Services = () => {
         react,
         tailwind,
         figma,
-        python
+        python,
+        git,
+        github
     ];
 
     return (
