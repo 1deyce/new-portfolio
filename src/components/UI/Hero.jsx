@@ -98,8 +98,6 @@ const Hero = () => {
                     </div>
                     {/* Hero left end */}
                 </div>
-                
-
             </div>
         </section>
     )
