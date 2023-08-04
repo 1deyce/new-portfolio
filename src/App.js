@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className='overflow-hidden'>
       {isloading ? (
         <div className="loader-wrapper flex justify-center items-center h-screen">
           <Triangle
