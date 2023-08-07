@@ -1,0 +1,17 @@
+/* carousel styles */
+@keyframes scroll {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -100%;
+    }
+}
+  
+.animate {
+    animation: scroll 20s linear infinite;
+}
+  
+.animate:hover {
+    animation-play-state: paused;
+}

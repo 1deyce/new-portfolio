@@ -17,7 +17,7 @@ const Hero = () => {
                             data-aos-duration='1500'
                             className='text-black dark:text-white font-[500] text-[20px]'
                         >
-                            Hi there,
+                            Welcome!
                         </h5>
                         <h1
                             data-aos='fade-up'
@@ -39,7 +39,7 @@ const Hero = () => {
                     >
                         <a href="#contact">
                             <button className='bg-primaryColor text-white font-[500] flex items-center gap-2 hover:dark:bg-white hover:dark:text-black py-2 px-3 rounded-[10px] transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-secondaryColor duration-500'>
-                                <i class="ri-mail-line"></i> Hire Me
+                                <i className="ri-mail-line"></i> Hire Me
                             </button>
                         </a>
                         <a
@@ -56,7 +56,7 @@ const Hero = () => {
                         className='flex max-w-2xl gap-2 text-secondaryColor dark:text-white mt-12 font-[500] text-[15px] leading-7 sm:pl-14 sm:pr-10 whitespace-pre-line'
                     >
                         <span className='text-primaryColor'>
-                            <i class="ri-apps-2-line"></i>
+                            <i className="ri-apps-2-line"></i>
                         </span>
                         <ReadMoreReact
                             text={
@@ -83,7 +83,7 @@ const Hero = () => {
                                 href="https://www.linkedin.com/in/keenan-deyce-5b9ab3219/"
                                 className='text-secondaryColor dark:text-primaryColor text-[20px] font-[500]'
                             >
-                                <i class="ri-linkedin-line"></i>
+                                <i className="ri-linkedin-line"></i>
                             </a>
                         </span>
                         <span className='animate-bounce'>
@@ -92,7 +92,7 @@ const Hero = () => {
                                 href="https://github.com/1deyce"
                                 className='text-secondaryColor dark:text-primaryColor text-[20px] font-[500]'
                             >
-                                <i class="ri-github-fill"></i>
+                                <i className="ri-github-fill"></i>
                             </a>
                         </span>
                     </div>
