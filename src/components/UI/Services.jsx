@@ -44,11 +44,11 @@
                         </p>
                     </div>
                     <div className="flex justify-center items-center sm:py-12">
-                        <div className="w-full py-3 sm:max-w-3xl sm:mx-auto sm:px-0">
-                            <div className="relative antialiased text-sm font-semibold">
-                                <div className="mt-6 sm:mt-0 sm:mb-12 sm:flex-wrap md:flex lg:flex xl:flex 2xl:flex ">
+                        <div className="w-full py-3 sm:px-0">
+                            <div className="relative antialiased text-sm font-semibold items-center">
+                                <div className="mt-6 sm:mt-0 sm:mb-12 sm:flex flex-wrap justify-center items-center">
                                     {/* ========== first card ========== */}
-                                    <div className="w-full sm:w-1/3 mb-4 sm:mb-0 max-w-xs flex justify-center items-center">
+                                    <div className="w-full sm:w-1/3 mb-4 sm:mb-0 sm:max-w-xs flex justify-center items-center">
                                         <div
                                             data-aos="fade-right"
                                             data-aos-duration="1200"
@@ -68,7 +68,7 @@
                                     </div>
 
                                     {/* ========== second card ========== */}
-                                    <div className="w-full sm:w-1/3 mb-4 sm:mb-0 max-w-xs">
+                                    <div className="w-full sm:w-1/3 mb-4 sm:mb-0 sm:max-w-xs">
                                         <div
                                             data-aos="fade-up"
                                             data-aos-duration="2000"
@@ -82,7 +82,7 @@
                                     </div>
 
                                     {/* ========== third card ========== */}
-                                    <div className="img w-full sm:w-1/3 mb-4 sm:mb-0 max-w-xs">
+                                    <div className="img w-full sm:w-1/3 mb-4 sm:mb-0 sm:max-w-xs">
                                         <div
                                             data-aos="fade-left"
                                             data-aos-duration="1200"
@@ -104,12 +104,12 @@
                         {/* 1 */}
                         <div className="w-full h-24 border-t border-b border-white dark:border-black overflow-hidden relative animate-infinite-slider">
                             {/* 2 */}
-                            <div className="w-[200%] flex items-center h-24 absolute left-0 animate gap-1 md:gap-12 lg:gap-16 xl:gap-24 animate-infinite-slide">
+                            <div className="w-[200%] flex items-center h-24 absolute left-0 animate gap-1 animate-infinite-slide">
                                 {/* 3 */}
                                 {images.map((image, index) => {
                                     return (
                                     <div key={index} className="flex justify-center items-start w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
-                                        <img className='h-8 w-8 md:h-14 md:w-14 lg:h-16 lg:w-16 xl:h-18 xl:w-18' src={image} alt='' />
+                                        <img className='h-10 w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16' src={image} alt='' />
                                     </div>
                                     );
                                 })}
