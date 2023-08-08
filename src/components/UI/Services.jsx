@@ -104,9 +104,9 @@
                         {/* 1 */}
                         <div className="w-full h-24 border-t border-b border-white dark:border-black overflow-hidden relative animate-infinite-slider">
                             {/* 2 */}
-                            <div className="w-[200%] flex items-center h-24 absolute left-0 animate gap-1 animate-infinite-slide">
+                            <div className="md:w-[200%] w-[400%] flex items-center h-24 absolute left-0 animate gap-1 animate-infinite-slide">
                                 {/* 3 */}
-                                {images.map((image, index) => {
+                                {images.concat(images).map((image, index) => {
                                     return (
                                     <div key={index} className="flex justify-center items-start w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
                                         <img className='h-10 w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16' src={image} alt='' />

@@ -7,6 +7,7 @@ import Header from './components/Header/Header.jsx';
 import Hero from './components/UI/Hero.jsx';
 import About from './components/UI/About.jsx';
 import Services from './components/UI/Services.jsx';
+import Portfolio from './components/UI/Portfolio';
 
 function App() {   
   const [isloading, setIsLoading] = useState(true);
@@ -27,8 +28,8 @@ function App() {
       {isloading ? (
         <div className="loader-wrapper flex justify-center items-center h-screen">
           <Triangle
-            height="150"
-            width="150"
+            height="100"
+            width="100"
             color="#007ced"
             ariaLabel="triangle-loading"
             wrapperStyle={{}}
@@ -41,7 +42,8 @@ function App() {
           <Header />
           <Hero />
           <About />
-          <Services/>
+          <Services />
+          <Portfolio />
         </div>
       )}
     </div>
