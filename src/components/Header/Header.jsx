@@ -49,7 +49,7 @@ const Header = () => {
 
                     {/* nav middle start */}
                     <div className='menu mx-auto ml-72'>
-                        <ul className='flex items-center justify-center gap-20'>
+                        <ul className='md:flex items-center justify-center gap-20 hidden'>
                             <li>
                                 <a className='text-black dark:text-white hover:text-primaryColor dark:hover:text-primaryColor font-[600]' href="#about">About</a>
                             </li>
