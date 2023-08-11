@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react';
+import "./App.css";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import "./App.css";
 import { Triangle } from 'react-loader-spinner';
 import Header from './components/Header/Header.jsx';
 import Hero from './components/UI/Hero.jsx';
 import About from './components/UI/About.jsx';
 import Services from './components/UI/Services.jsx';
 import Portfolio from './components/UI/Portfolio';
+import Contact from './components/UI/Contact';
+import Footer from './components/Footer/Footer';
 
 function App() {   
   const [isloading, setIsLoading] = useState(true);
@@ -40,10 +42,12 @@ function App() {
       ) : (
         <div>
           <Header />
-          <Hero />
-          <About />
-          <Services />
-          <Portfolio />
+            <Hero />
+            <About />
+            <Services />
+            <Portfolio />
+            <Contact />
+          <Footer />
         </div>
       )}
     </div>
