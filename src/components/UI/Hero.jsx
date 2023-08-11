@@ -35,7 +35,9 @@ const Hero = () => {
                             className='flex items-center gap-6 mt-7'
                         >
                             <a href="#contact">
-                                <button className='bg-primaryColor text-white font-[500] flex items-center gap-2 hover:dark:bg-white hover:dark:text-black py-2 px-3 rounded-[10px] transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-secondaryColor duration-500'>
+                                <button 
+                                    className='bg-primaryColor text-white font-[500] flex items-center gap-2 hover:dark:bg-white hover:dark:text-black py-2 px-3 rounded-[10px] transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-secondaryColor duration-500'
+                                >
                                     <i className="ri-mail-line"></i> Hire Me
                                 </button>
                             </a>

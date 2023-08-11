@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "../../index.css";
 import "../../App.css";
+import "../../styles/toggle.css";
 
 const Header = () => {
     const [theme, setTheme] = useState("null");
@@ -33,40 +34,66 @@ const Header = () => {
                 <div className='flex items-center justify-between'>
                     {/* logo start */}
                     <div className='flex items-center gap-[10]'>
-                        <span className='w-[50px] h-[50px] text-white text-[30px] font-[500] bg-primaryColor rounded-full flex items-center text-center justify-center cursor-pointer border-black dark:border-white border-2'>
+                        <span 
+                            className='w-[50px] h-[50px] text-white text-[30px] font-[500] bg-primaryColor rounded-full flex items-center text-center justify-center cursor-pointer border-black dark:border-white border-2'
+                        >
                             K
                         </span>
                         <div className='leading-[20px] pl-2'>
-                            <h2 className='text-xl text-black dark:text-white font-[600]'>
+                            <h2 
+                                className='text-xl text-black dark:text-white font-[600]'
+                            >
                                 Keenan Deyce
                             </h2>
-                            <p className='text-[14px] font-[600] text-primaryColor'>
+                            <p 
+                                className='text-[14px] font-[600] text-primaryColor'
+                            >
                                 Portfolio
                             </p>
                         </div>
                     </div>
                     {/* logo end */}
 
-                    {/* nav middle start */}
+                    {/* nav  start */}
                     <div className='menu mx-auto ml-72'>
                         <ul className='md:flex items-center justify-center gap-20 hidden'>
                             <li>
-                                <a className='text-black dark:text-white hover:text-primaryColor dark:hover:text-primaryColor font-[600]' href="#about">About</a>
+                                <a 
+                                    className='text-black dark:text-white hover:text-primaryColor dark:hover:text-primaryColor font-[600]' 
+                                    href="#about"
+                                >
+                                    About
+                                </a>
                             </li>
                             <li>
-                                <a className='text-black dark:text-white hover:text-primaryColor dark:hover:text-primaryColor font-[600]' href="#services">Services</a>
+                                <a 
+                                    className='text-black dark:text-white hover:text-primaryColor dark:hover:text-primaryColor font-[600]' 
+                                    href="#services"
+                                >
+                                    Services
+                                </a>
                             </li>
                             <li>
-                                <a className='text-black dark:text-white hover:text-primaryColor dark:hover:text-primaryColor font-[600]' href="#portfolio">Portfolio</a>
+                                <a 
+                                    className='text-black dark:text-white hover:text-primaryColor dark:hover:text-primaryColor font-[600]'
+                                    href="#portfolio"
+                                >
+                                    Portfolio
+                                </a>
                             </li>
                             <li>
-                                <a className='text-black dark:text-white hover:text-primaryColor dark:hover:text-primaryColor font-[600]' href="#contact">Contact</a>
+                                <a 
+                                    className='text-black dark:text-white hover:text-primaryColor dark:hover:text-primaryColor font-[600]' 
+                                    href="#contact"
+                                >
+                                    Contact
+                                </a>
                             </li>
                         </ul>
                     </div>
-                    {/* nav middle end */}
+                    {/* nav end */}
 
-                    {/* nav right start */}
+                    {/* toggle start */}
                     <label className="switch">
                         <span className="sun">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -82,13 +109,16 @@ const Header = () => {
                         <input type="checkbox" className="input" onChange={handleThemeSwitch} />
                         <span className="slider"></span>
                     </label>
-                    {/* menu */}
+                    {/* toggle end */}
+
+                    {/* hamburgermenu start */}
                     <span 
                         // onClick={toggleMenu} 
                         className='text-2xl text-smallTextColor dark:text-white md:hidden cursor-pointer'
                     >
                         <i className="ri-menu-line"></i>
                     </span>
+                    {/* hamburgermenu start */}
                 </div>
             </div>
         </header>

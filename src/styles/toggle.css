@@ -1,0 +1,127 @@
+
+
+/* Dark Mode Toggle start */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 35px;
+  margin-bottom: 3px;
+  transition-delay: 0.5s;
+}
+  
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+  
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  transition: .4s;
+  border-radius: 30px;
+}
+  
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #fff;
+  transition: .4s;
+}
+  
+.sun svg {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  fill: #fce373;
+  transition: .4s;
+  transform: translateX(0);
+}
+  
+.moon svg {
+  fill: #fff;
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  transition: .4s;
+  transform: translateX(-30px);
+}
+  
+.input:checked + .slider {
+  background-color: #007ced;
+}
+  
+.input:focus + .slider {
+  box-shadow: 0 0 1px #007ced;
+}
+  
+.input:checked + .slider:before {
+  transform: translateX(30px);
+}
+  
+.input:checked + .slider .sun svg {
+  transform: translateX(30px);
+}
+  
+.input:checked + .slider .moon svg {
+  transform: translateX(0);
+}
+  
+  /* .switch:hover */ 
+  .sun svg {
+    animation: rotate 15s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* .switch:hover */ 
+  .moon svg {
+    animation: tilt 5s linear infinite;
+  }
+  
+  @keyframes tilt {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    25% {
+      transform: rotate(-20deg);
+    }
+  
+    75% {
+      transform: rotate(20deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  /* Dark Mode Toggle end */

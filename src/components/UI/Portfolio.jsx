@@ -8,11 +8,15 @@ const Portfolio = () => {
             <div className='container mb-20'>
                 <div className='text-center mb-10'>
                     <h2 className='text-primaryColor dark:text-primaryColor font-[800] text-5xl mb-6'>
-                        <span className='border-b-2 border-solid border-secondaryColor dark:border-white'>
+                        <span 
+                            className='border-b-2 border-solid border-secondaryColor dark:border-white'
+                        >
                             Portfolio
                         </span>
                     </h2>
-                    <p className='lg:max-w-[1000px] lg:mx-auto text-headingColor dark:text-white font-[500] text-[16px] leading-7 pt-6'>
+                    <p 
+                        className='lg:max-w-[1000px] lg:mx-auto text-headingColor dark:text-white font-[500] text-[16px] leading-7 pt-6'
+                    >
                         Whether it's web development, graphic design, or any other creative endeavor, I always strive for excellence and attention to detail. Here, you'll find a showcase of my latest projects, where I've poured my creativity and expertise.
                     </p>
                 </div>
@@ -38,7 +42,7 @@ const Portfolio = () => {
                         <p 
                             className="mb-3 font-normal text-secondaryColor dark:text-white"
                         >
-                            React, Tailwind, CSS
+                            React, Tailwind, CSS, Firebase
                         </p>
                         <a 
                             href="https://github.com/1deyce/Gym-website" 

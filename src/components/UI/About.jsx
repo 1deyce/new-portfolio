@@ -5,20 +5,25 @@ const About = () => {
     return (
         <section className='bg-white dark:bg-black pt-0 pb-0'>
             {/* Exp/Edu start */}
+            {/* Education Card */}
             <div
                 data-aos='fade-up-right' 
                 data-aos-duration="1500"
                 className='container flex justify-center transform transition ease-in duration-500 mb-7'
-            > {/* Education Card */}
+            >
                 <div className='bg-secondaryColor dark:bg-secondaryColor w-[660px] h-[250px] mt-20 pb-10 rounded-[30px] shadow-md dark:shadow-md shadow-black'>
-                    <h1 className='text-white text-center px-10 pt-7 pb-3 font-[700] text-4xl underline-offset-8 underline decoration-2'>
+                    <h1 
+                        className='text-white text-center px-10 pt-7 pb-3 font-[700] text-4xl underline-offset-8 underline decoration-2'
+                    >
                         Education
                     </h1>
-                    <p className='text-white px-10 pt-2 font-[400] tracking-wider'>
+                    <p 
+                        className='text-white px-10 pt-2 font-[400] tracking-wider'
+                    >
                         <span className='pr-1.5 text-primaryColor'>
                             <i className="ri-box-3-fill"></i>
                         </span>
-                        2019 - 2021 : BA Sport Science Degree <span className='text-primaryColor'>@</span>
+                            2019 - 2021 : BA Sport Science Degree <span className='text-primaryColor'>@</span>
                         <a 
                             className='hover:text-primaryColor' 
                             title='UWC' 
@@ -32,7 +37,7 @@ const About = () => {
                         <span className='pr-1.5 text-primaryColor'>
                             <i className="ri-box-3-fill"></i>
                         </span>
-                        Feb - Jul 2023 : Student Software Developer <span className='text-primaryColor'>@</span>
+                            Feb - Jul 2023 : Student Software Developer <span className='text-primaryColor'>@</span>
                         <a 
                             className='hover:text-primaryColor' 
                             title='CapaCiti' 
@@ -46,8 +51,8 @@ const About = () => {
                         <span className='pr-1.5 text-primaryColor'>
                             <i className="ri-box-3-fill"></i>
                         </span>
-                        Jul 2023 - Present : Student Software Engineer <span className='text-primaryColor'>@</span>
-                            <a 
+                            Jul 2023 - Present : Student Software Engineer <span className='text-primaryColor'>@</span>
+                        <a 
                             className='hover:text-primaryColor' 
                             title='ALX' 
                             href="https://www.linkedin.com/company/alx-africa-sa/mycompany/"
@@ -64,14 +69,18 @@ const About = () => {
                 className='flex justify-center transform transition ease-in duration-500'
             >
                 <div className='bg-secondaryColor dark:bg-secondaryColor w-[660px] h-[200px] mt-10 rounded-[30px] cursor-pointer shadow-md dark:shadow-md shadow-black'>
-                    <h1 className='text-white text-center px-10 pt-7 pb-3 font-[700] text-4xl underline-offset-8 underline decoration-2'>
+                    <h1 
+                        className='text-white text-center px-10 pt-7 pb-3 font-[700] text-4xl underline-offset-8 underline decoration-2'
+                    >
                         Experience
                     </h1>
-                    <p className='text-white px-10 pt-3 font-[400] tracking-wider'>
+                    <p 
+                        className='text-white px-10 pt-3 font-[400] tracking-wider'
+                    >
                         <span className='pr-1.5 text-primaryColor'>
                             <i className="ri-box-3-fill"></i>
                         </span>
-                        Jun - Dec 2022 : Customer Service Agent <span className='text-primaryColor'>@</span>
+                            Jun - Dec 2022 : Customer Service Agent <span className='text-primaryColor'>@</span>
                         <a 
                             className='hover:text-primaryColor' 
                             title='Sirius' 
@@ -85,7 +94,7 @@ const About = () => {
                         <span className='pr-1.5 text-primaryColor'>
                             <i className="ri-box-3-fill"></i>
                         </span>
-                        Jul 2023 - Present : Junior Software Developer <span className='text-primaryColor'>@</span>
+                            Jul 2023 - Present : Junior Software Developer <span className='text-primaryColor'>@</span>
                         <a 
                             className='hover:text-primaryColor' 
                             title='Younglings' 

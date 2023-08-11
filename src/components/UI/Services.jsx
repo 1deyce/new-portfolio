@@ -1,6 +1,6 @@
     import React from 'react';
     import 'aos/dist/aos.css';
-    import "../../slider.css";
+    import "../../styles/slider.css";
     import "../../App.css";
     import html from "../../assets/images/html-5.png"; 
     import css from "../../assets/images/css-3.png";
@@ -74,9 +74,15 @@
                                             data-aos-duration="2000"
                                             className="bg-secondaryColor dark:bg-white p-4 rounded-xl group cursor-pointer ease-in duration-150 h-full"
                                         >
-                                            <h3 className="text-white dark:text-secondaryColor font-[700] mb-2 mt-1 group-hover:text-white dark:group-hover:text-secondaryColor text-xl text-center">UI/UX Design</h3>
-                                            <p className="text-[15px] text-white dark:text-secondaryColor group-hover:text-white dark:group-hover:text-secondaryColor leading-7 text-center">
-                                            Using Balsamiq and Figma, I create intuitive and visually appealing user interfaces and then translate the design concepts into code, ensuring a seamless and engaging frontend experience for our users.
+                                            <h3 
+                                                className="text-white dark:text-secondaryColor font-[700] mb-2 mt-1 group-hover:text-white dark:group-hover:text-secondaryColor text-xl text-center"
+                                            >
+                                                UI/UX Design
+                                            </h3>
+                                            <p 
+                                                className="text-[15px] text-white dark:text-secondaryColor group-hover:text-white dark:group-hover:text-secondaryColor leading-7 text-center"
+                                            >    
+                                                Using Balsamiq and Figma, I create intuitive and visually appealing user interfaces and then translate the design concepts into code, ensuring a seamless and engaging frontend experience for our users.
                                             </p>
                                         </div>
                                     </div>
@@ -88,9 +94,15 @@
                                             data-aos-duration="1200"
                                             className="bg-white dark:bg-black p-4 rounded-xl group cursor-pointer ease-in duration-150 h-full"
                                         >
-                                            <h3 className="text-primaryColor font-[700] mb-2 mt-1 text-xl text-center">Backend Development</h3>
-                                            <p className="text-[15px] text-smallTextColor dark:text-white dark:group-hover:text-white leading-7 text-center">
-                                            With expertise in server-side programming languages, databases, and frameworks, I can build robust back-end systems to power your software applications and websites. 
+                                            <h3 
+                                                className="text-primaryColor font-[700] mb-2 mt-1 text-xl text-center"
+                                            >
+                                                Backend Development
+                                            </h3>
+                                            <p 
+                                                className="text-[15px] text-smallTextColor dark:text-white dark:group-hover:text-white leading-7 text-center"
+                                            >
+                                                With expertise in server-side programming languages, databases, and frameworks, I can build robust back-end systems to power your software applications and websites. 
                                             </p>
                                         </div>
                                     </div>
@@ -101,16 +113,13 @@
 
                     {/* Infinite Slider */}
                     <div className="flex items-center min-h-[200px] justify-center">
-                        {/* 1 */}
-                        <div className="w-full h-24 border-t border-b border-white dark:border-black overflow-hidden relative animate-infinite-slider">
-                            {/* 2 */}
-                            <div className="md:w-[200%] w-[400%] flex items-center h-24 absolute left-0 animate gap-1 animate-infinite-slide">
-                                {/* 3 */}
+                        <div className="w-full h-24 border-t border-b border-white dark:border-black overflow-hidden relative">
+                            <div className="md:w-[200%] w-[400%] flex items-center h-24 absolute left-0 animate gap-1">
                                 {images.concat(images).map((image, index) => {
                                     return (
-                                    <div key={index} className="flex justify-center items-start w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
-                                        <img className='h-10 w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16' src={image} alt='' />
-                                    </div>
+                                        <div key={index} className="flex justify-center items-start w-full">
+                                            <img className='h-10 w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16' src={image} alt='' />
+                                        </div>
                                     );
                                 })}
                             </div>
