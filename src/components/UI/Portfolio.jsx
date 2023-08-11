@@ -4,7 +4,7 @@ import Img from "../../assets/images/portfolio-011.jpg";
 
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="bg-white dark:bg-black pt-20">
+    <section id="portfolio" className="bg-white dark:bg-black pt-20 pb-20">
       <div className="container mb-20">
         <div className="text-center mb-10">
           <h2 className="text-primaryColor dark:text-primaryColor font-[800] text-5xl mb-6">

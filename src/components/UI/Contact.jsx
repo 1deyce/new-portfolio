@@ -27,14 +27,14 @@ const Contact = () => {
             <iframe
               title="google-maps"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423812.32927425334!2d18.326422855396498!3d-33.91452907067648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc500f8826eed7%3A0x687fe1fc2828aa87!2sCape%20Town!5e0!3m2!1sen!2sza!4v1682582910036!5m2!1sen!2sza"
-              className="border-0 w-full h-full"
+              className="border-0 w-full h-full md:rounded-l-2xl rounded-2xl"
               allowFullScreen=""
-              loading="lazy"
+              loading="eager"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
 
-          <div className="w-full mt-8 md:mt-0 md:w-1/2 sm:h-[450px] lg:flex items-center bg-indigo-100 dark:bg-black px-4 lg:px-8 py-8">
+          <div className="w-full mt-8 md:mt-0 md:w-1/2 sm:h-[450px] lg:flex items-center bg-secondaryColor dark:bg-black px-4 lg:px-8 py-8 rounded-xl md:rounded-r-xl">
             <form className="w-full">
               <div className="mb-5">
                 <input
