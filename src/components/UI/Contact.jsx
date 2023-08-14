@@ -2,20 +2,27 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-white dark:bg-black pt-16 pb-16">
+    <section id="contact" className="bg-white dark:bg-black pt-16 pb-20">
       <div className="container">
         <h2 className="text-primaryColor dark:text-primaryColor font-[800] text-5xl mb-8 text-center">
           <span className="border-b-2 border-solid border-secondaryColor dark:border-white">
             Get in touch
           </span>
         </h2>
-        <p className="text-secondaryColor dark:text-white mb-10 pt-5 text-center font-[500]">
+        <p className="text-secondaryColor dark:text-white mb-10 pt-5 text-center font-[500] text-[18px]">
           <span className="text-primaryColor font-[800]">E-Mail: </span>
           keenandeyce@gmail.com <br />
+          <br />
           <span className="text-primaryColor font-[800]">Whatsapp: </span>
           +27 66 216 1232 <br />
+          <br />
           <span className="text-primaryColor font-[800]">LinkedIn: </span>
-          https://www.linkedin.com/in/keenan-deyce-5b9ab3219/
+          <a
+            className="hover:cursor-pointer hover:underline hover:text-primaryColor"
+            href="https://www.linkedin.com/in/keenan-deyce-5b9ab3219/"
+          >
+            Keenan Deyce
+          </a>
         </p>
         <div className="md:flex justify-between items-center">
           <div
@@ -34,14 +41,18 @@ const Contact = () => {
             ></iframe>
           </div>
 
-          <div className="w-full mt-8 md:mt-0 md:w-1/2 sm:h-[450px] lg:flex items-center bg-secondaryColor dark:bg-black px-4 lg:px-8 py-8 rounded-xl md:rounded-r-xl">
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            className="w-full mt-8 md:mt-0 md:w-1/2 sm:h-[450px] lg:flex items-center bg-[#cfeeff] dark:bg-black px-4 lg:px-8 py-8 rounded-xl md:rounded-r-xl"
+          >
             <form className="w-full">
               <div className="mb-5">
                 <input
                   type="text"
                   placeholder="Enter your name"
                   className="w-full p-3 focus:outline-none rounded-[5px] dark:bg-[#2b2d33] dark:text-white"
-                  name="fullName" // Add a name attribute to the input
+                  name="fullName"
                   required
                 />
               </div>
@@ -50,7 +61,7 @@ const Contact = () => {
                   type="text"
                   placeholder="Enter your email"
                   className="w-full p-3 focus:outline-none rounded-[5px] dark:bg-[#2b2d33] dark:text-white"
-                  name="email" // Add a name attribute to the input
+                  name="email"
                   required
                 />
               </div>
@@ -59,7 +70,7 @@ const Contact = () => {
                   type="text"
                   placeholder="Subject"
                   className="w-full p-3 focus:outline-none rounded-[5px] dark:bg-[#2b2d33] dark:text-white"
-                  name="subject" // Add a name attribute to the input
+                  name="subject"
                   required
                 />
               </div>
@@ -70,7 +81,7 @@ const Contact = () => {
                   rows={3}
                   placeholder="Write your message"
                   className="w-full p-3 focus:outline-none rounded-[5px] dark:bg-[#2b2d33] dark:text-white resize-none"
-                  name="message" // Add a name attribute to the textarea
+                  name="message"
                   required
                 />
               </div>

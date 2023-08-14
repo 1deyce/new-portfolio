@@ -33,7 +33,7 @@ const Portfolio = () => {
               Fitness Trainer Website
             </h5>
             <p className="mb-3 font-normal text-secondaryColor dark:text-white">
-              React, Tailwind, CSS, Firebase
+              React, Tailwind, CSS
             </p>
             <a
               href="https://github.com/1deyce/Gym-website"
