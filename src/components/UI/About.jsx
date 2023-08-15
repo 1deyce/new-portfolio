@@ -3,7 +3,7 @@ import "aos/dist/aos.css";
 
 const About = () => {
   return (
-    <section className="bg-white dark:bg-black pt-0 pb-0">
+    <section id="about" className="bg-white dark:bg-black pt-0 pb-0">
       {/* Exp/Edu start */}
       {/* Education Card */}
       <div

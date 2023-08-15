@@ -3,6 +3,7 @@ import "./App.css";
 import 'aos/dist/aos.css';
 import Aos from 'aos';
 import { Triangle } from 'react-loader-spinner';
+import { useMediaQuery } from 'react-responsive';
 import Header from './components/Header/Header.jsx';
 import Hero from './components/UI/Hero.jsx';
 import About from './components/UI/About.jsx';
@@ -12,6 +13,7 @@ import Contact from './components/UI/Contact';
 import Footer from './components/Footer/Footer';
 
 function App() {   
+  const isMobile = useMediaQuery({ maxWidth: '640px' });
   const [isloading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -40,13 +42,15 @@ function App() {
           />
         </div>
       ) : (
-        <div>
+        <div className={`min-h-screen ${isMobile ? 'overflow-x-hidden' : ''}`}>
           <Header />
+          <main />
             <Hero />
             <About />
             <Services />
             <Portfolio />
             <Contact />
+          <main />
           <Footer />
         </div>
       )}

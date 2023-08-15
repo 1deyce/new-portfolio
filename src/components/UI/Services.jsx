@@ -28,7 +28,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="bg-white dark:bg-black pt-20">
+    <section id="services" className="bg-white dark:bg-black pt-18">
       <div className="container lg:pt-5">
         <div className="text-center">
           <h2 className="text-primaryColor dark:text-primaryColor font-[800] text-5xl mb-6">

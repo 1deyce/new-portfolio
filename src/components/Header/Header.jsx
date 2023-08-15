@@ -1,9 +1,56 @@
 import React, { useEffect, useState, useRef } from "react";
+import { useMediaQuery } from "react-responsive";
 import "../../index.css";
 import "../../App.css";
 import "../../styles/toggle.css";
 
 const Header = () => {
+  const headerRef = useRef(null);
+  const menuRef = useRef(null);
+  const isMobile = useMediaQuery({ maxWidth: 768 }); //adjust breakpoint as needed
+
+  const stickyHeaderFunc = () => {
+    window.addEventListener("scroll", () => {
+      if (headerRef.current !== null) {
+        if (
+          document.body.scrollTop > 80 ||
+          document.documentElement.scrollTop > 80
+        ) {
+          headerRef.current.classList.add("sticky__header");
+        } else {
+          headerRef.current.classList.remove("sticky__header");
+        }
+      }
+    });
+  };
+
+  useEffect(() => {
+    stickyHeaderFunc();
+
+    return window.removeEventListener("scroll", stickyHeaderFunc);
+  }, []);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+
+    const targetAttr = e.target.getAttribute("href");
+    const location = document.querySelector(targetAttr).offsetTop;
+
+    window.scrollTo({
+      top: location - 80,
+      left: 0,
+    });
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    if (menuRef.current !== null) {
+      menuRef.current.classList.toggle("show__menu");
+    }
+  };
+
   const [theme, setTheme] = useState("null");
 
   useEffect(() => {
@@ -28,18 +75,11 @@ const Header = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
-  const [isOpen, setIsOpen] = useState(false);
-  const menuRef = useRef(null);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    if (menuRef.current !== null) {
-      menuRef.current.classList.toggle("show__menu");
-    }
-  };
-
   return (
-    <header className="w-full h-20 leading-[80px] flex items-center dark:bg-black">
+    <header
+      ref={headerRef}
+      className="w-full h-[80px] leading-[80px] flex items-center dark:bg-black"
+    >
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
           {/* logo start */}
@@ -60,13 +100,20 @@ const Header = () => {
 
           {/* nav  start */}
           <div
-            className="menu navbar mx-auto ml-72"
+            className={`menu navbar pr-20 mx-auto ${
+              isOpen ? "show__menu" : ""
+            }`}
             ref={menuRef}
             onClick={toggleMenu}
           >
-            <ul className="md:flex items-center justify-center gap-20 hidden">
+            <ul
+              className={`flex items-center justify-center gap-20 ${
+                isMobile ? "dark:bg-primaryColor" : ""
+              }`}
+            >
               <li>
                 <a
+                  onClick={handleClick}
                   className="text-black dark:text-white hover:text-primaryColor dark:hover:text-primaryColor font-[600]"
                   href="#about"
                 >
@@ -75,6 +122,7 @@ const Header = () => {
               </li>
               <li>
                 <a
+                  onClick={handleClick}
                   className="text-black dark:text-white hover:text-primaryColor dark:hover:text-primaryColor font-[600]"
                   href="#services"
                 >
@@ -83,6 +131,7 @@ const Header = () => {
               </li>
               <li>
                 <a
+                  onClick={handleClick}
                   className="text-black dark:text-white hover:text-primaryColor dark:hover:text-primaryColor font-[600]"
                   href="#portfolio"
                 >
@@ -91,6 +140,7 @@ const Header = () => {
               </li>
               <li>
                 <a
+                  onClick={handleClick}
                   className="text-black dark:text-white hover:text-primaryColor dark:hover:text-primaryColor font-[600]"
                   href="#contact"
                 >
@@ -124,13 +174,16 @@ const Header = () => {
           {/* toggle end */}
 
           {/* hamburgermenu start */}
-          <span
-            onClick={toggleMenu}
-            className="text-2xl text-smallTextColor dark:text-white md:hidden cursor-pointer"
-          >
-            <i className="ri-menu-line"></i>
-          </span>
-          {/* hamburgermenu start */}
+          <div className="flex items-center gap-4">
+            <span
+              onClick={toggleMenu}
+              className="text-2xl text-secondaryColor dark:text-white md:hidden cursor-pointer"
+            >
+              <i className="ri-menu-line"></i>
+            </span>
+          </div>
+
+          {/* hamburgermenu end */}
         </div>
       </div>
     </header>

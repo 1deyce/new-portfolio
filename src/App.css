@@ -5,11 +5,13 @@
   margin: 0;
   box-sizing: border-box;
 }
-  
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Urbanist", sans-serif;
-  background: #fff;
   overflow-x: hidden;
 }
   
@@ -20,6 +22,7 @@ body {
   margin: auto;
 }
 
+
 @media only screen and (max-width:768px) {
   .menu {
     width: 100%;
@@ -27,7 +30,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background: #00000084;
+    background: #007ced;
     z-index: 100;
     display: none;
   }
@@ -39,7 +42,7 @@ body {
     top: 0;
     right: 0;
     z-index: 200;
-    background: #fff;
+    background: var(secondaryColor);
     flex-direction: column;
     line-height: 30px;
     justify-content: center;
@@ -48,6 +51,7 @@ body {
 
   .show__menu {
     display: block;
+    width: 250px;
   }
 }
 
