@@ -25,6 +25,8 @@ const About = () => {
               className="hover:text-primaryColor"
               title="UWC"
               href="https://www.linkedin.com/school/uwc/"
+              target="_blank"
+              rel="noreferrer"
             >
               University of the Western Cape
             </a>
@@ -39,6 +41,8 @@ const About = () => {
               className="hover:text-primaryColor"
               title="CapaCiti"
               href="https://www.linkedin.com/showcase/capacitiza/"
+              target="_blank"
+              rel="noreferrer"
             >
               CapaCiTi (UVU Africa)
             </a>
@@ -53,6 +57,8 @@ const About = () => {
               className="hover:text-primaryColor"
               title="ALX"
               href="https://www.linkedin.com/company/alx-africa-sa/mycompany/"
+              target="_blank"
+              rel="noreferrer"
             >
               ALX Africa
             </a>
@@ -79,6 +85,8 @@ const About = () => {
               className="hover:text-primaryColor"
               title="Sirius"
               href="https://www.linkedin.com/company/siriussupport/"
+              target="_blank"
+              rel="noreferrer"
             >
               Sirius Support
             </a>
@@ -93,6 +101,8 @@ const About = () => {
               className="hover:text-primaryColor"
               title="Younglings"
               href="https://www.linkedin.com/company/younglingsafrica/mycompany/"
+              target="_blank"
+              rel="noreferrer"
             >
               Younglings Africa
             </a>

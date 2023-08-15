@@ -20,6 +20,8 @@ const Contact = () => {
           <a
             className="hover:cursor-pointer hover:underline hover:text-primaryColor"
             href="https://www.linkedin.com/in/keenan-deyce-5b9ab3219/"
+            target="_blank"
+            rel="noreferrer"
           >
             Keenan Deyce
           </a>

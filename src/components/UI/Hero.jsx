@@ -78,6 +78,8 @@ const Hero = () => {
                 <a
                   title="LinkedIn"
                   href="https://www.linkedin.com/in/keenan-deyce-5b9ab3219/"
+                  target="_blank"
+                  rel="noreferrer"
                   className="text-secondaryColor dark:text-primaryColor text-[20px] font-[500]"
                 >
                   <i className="ri-linkedin-line"></i>
@@ -87,6 +89,8 @@ const Hero = () => {
                 <a
                   title="GitHub"
                   href="https://github.com/1deyce"
+                  target="_blank"
+                  rel="noreferrer"
                   className="text-secondaryColor dark:text-primaryColor text-[20px] font-[500]"
                 >
                   <i className="ri-github-fill"></i>
