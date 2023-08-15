@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import "./App.css";
-import Aos from 'aos';
 import 'aos/dist/aos.css';
+import Aos from 'aos';
 import { Triangle } from 'react-loader-spinner';
 import Header from './components/Header/Header.jsx';
 import Hero from './components/UI/Hero.jsx';

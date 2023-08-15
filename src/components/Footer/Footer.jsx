@@ -20,7 +20,7 @@ const Footer = () => {
           </div>
 
           <div className="w-full sm:w-1/2">
-            <p className="text-gray-300 leading-7 mt-4 sm:mt-0">
+            <p className="text-gray-300 leading-7 pt-8 sm:mt-0">
               Feel free to reach out to me through the contact information
               provided. I look forward to connecting with you !
             </p>
@@ -74,7 +74,7 @@ const Footer = () => {
                 className="text-gray-400 font-[600] hover:text-primaryColor"
                 href="#portfolio"
               >
-                Portfolio
+                Work
               </a>
             </li>
             <li>
