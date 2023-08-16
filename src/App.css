@@ -22,6 +22,18 @@ body {
   margin: auto;
 }
 
+.sticky__header {
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  box-shadow: 3px 3px -8px 3px #ddd;
+  box-shadow: 5px 5px 15px -5px #00000084;
+  z-index: 99;
+}
 
 @media only screen and (max-width:768px) {
   .menu {
