@@ -3,7 +3,7 @@ import "aos/dist/aos.css";
 
 const About = () => {
   return (
-    <section id="about" className="bg-white dark:bg-black pt-0 pb-0">
+    <section id="about" className="bg-white dark:bg-black pt-0 pb-20">
       {/* Exp/Edu start */}
       {/* Education Card */}
       <div
@@ -11,7 +11,7 @@ const About = () => {
         data-aos-duration="1500"
         className="container flex justify-center transform transition ease-in duration-500 mb-7"
       >
-        <div className="bg-secondaryColor dark:bg-secondaryColor w-[660px] h-[250px] mt-20 pb-10 rounded-[30px] shadow-md dark:shadow-md shadow-black">
+        <div className="bg-secondaryColor dark:bg-secondaryColor w-[660px] md:h-[250px] mt-20 pb-10 rounded-[30px] shadow-md dark:shadow-md shadow-black">
           <h1 className="text-white text-center px-10 pt-7 pb-3 font-[700] text-4xl underline-offset-8 underline decoration-2">
             Education
           </h1>
@@ -69,9 +69,9 @@ const About = () => {
       <div
         data-aos="fade-up-left"
         data-aos-duration="1500"
-        className="flex justify-center transform transition ease-in duration-500"
+        className="container flex justify-center transform transition ease-in duration-500"
       >
-        <div className="bg-secondaryColor dark:bg-secondaryColor w-[660px] h-[200px] mt-10 rounded-[30px] cursor-pointer shadow-md dark:shadow-md shadow-black">
+        <div className="bg-secondaryColor dark:bg-secondaryColor w-[660px] md:h-[200px] sm:h-[250px] mt-10 rounded-[30px] cursor-pointer shadow-md dark:shadow-md shadow-black">
           <h1 className="text-white text-center px-10 pt-7 pb-3 font-[700] text-4xl underline-offset-8 underline decoration-2">
             Experience
           </h1>
