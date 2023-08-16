@@ -5,7 +5,7 @@ import ReadMoreReact from "read-more-react";
 
 const Hero = () => {
   return (
-    <section className="bg-white dark:bg-black pt-0">
+    <section id="#home" className="bg-white dark:bg-black pt-0">
       <div className="container pt-14">
         <div className="md:block items-center justify-between sm:flex-col md:flex-row">
           {/* hero left start */}

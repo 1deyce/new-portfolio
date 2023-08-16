@@ -84,9 +84,11 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* logo start */}
           <div className="flex items-center gap-[10]">
-            <span className="w-[50px] h-[50px] text-white text-[30px] font-[500] bg-primaryColor rounded-full flex items-center text-center justify-center cursor-pointer border-black dark:border-white border-2">
-              K
-            </span>
+            <a href="home">
+              <span className="w-[50px] h-[50px] text-white text-[30px] font-[500] bg-primaryColor rounded-full flex items-center text-center justify-center cursor-pointer border-black dark:border-white border-2">
+                K
+              </span>
+            </a>
             <div className="leading-[20px] pl-2">
               <h2 className="text-xl text-black dark:text-white font-[600]">
                 Keenan Deyce

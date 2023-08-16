@@ -11,11 +11,11 @@ const About = () => {
         data-aos-duration="1500"
         className="container flex justify-center transform transition ease-in duration-500 mb-7"
       >
-        <div className="bg-secondaryColor dark:bg-secondaryColor w-[660px] md:h-[250px] mt-20 pb-10 rounded-[30px] shadow-md dark:shadow-md shadow-black">
-          <h1 className="text-white text-center px-10 pt-7 pb-3 font-[700] text-4xl underline-offset-8 underline decoration-2">
+        <div className="bg-secondaryColor dark:bg-gray-100 w-[660px] md:h-[270px] mt-20 pb-10 rounded-[30px] shadow-md dark:shadow-md shadow-black">
+          <h1 className="text-white dark:text-secondaryColor text-center px-10 pt-7 pb-3 font-[700] text-4xl underline-offset-8 underline decoration-2">
             Education
           </h1>
-          <p className="text-white px-10 pt-2 font-[400] tracking-wider">
+          <p className="text-white dark:text-secondaryColor px-10 pt-2 font-[600] tracking-wider">
             <span className="pr-1.5 text-primaryColor">
               <i className="ri-box-3-fill"></i>
             </span>
@@ -71,11 +71,11 @@ const About = () => {
         data-aos-duration="1500"
         className="container flex justify-center transform transition ease-in duration-500"
       >
-        <div className="bg-secondaryColor dark:bg-secondaryColor w-[660px] md:h-[200px] sm:h-[250px] mt-10 rounded-[30px] cursor-pointer shadow-md dark:shadow-md shadow-black">
-          <h1 className="text-white text-center px-10 pt-7 pb-3 font-[700] text-4xl underline-offset-8 underline decoration-2">
+        <div className="bg-secondaryColor dark:bg-gray-100 w-[660px] md:h-[200px] mt-10 pb-10 rounded-[30px] cursor-pointer shadow-md dark:shadow-md shadow-black">
+          <h1 className="text-white dark:text-secondaryColor text-center px-10 pt-7 pb-3 font-[700] text-4xl underline-offset-8 underline decoration-2">
             Experience
           </h1>
-          <p className="text-white px-10 pt-3 font-[400] tracking-wider">
+          <p className="text-white dark:text-secondaryColor px-10 pt-3 font-[600] tracking-wider">
             <span className="pr-1.5 text-primaryColor">
               <i className="ri-box-3-fill"></i>
             </span>
