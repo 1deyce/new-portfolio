@@ -41,7 +41,7 @@ body {
     height: 100%;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     background: #007ced;
     z-index: 100;
     display: none;
@@ -63,7 +63,7 @@ body {
 
   .show__menu {
     display: block;
-    width: 250px;
+    width: 200px;
   }
 }
 
