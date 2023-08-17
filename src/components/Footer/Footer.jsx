@@ -54,43 +54,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        <div>
-          <ul className="flex items-center justify-center gap-6 sm:gap-16 mt-10">
-            <li>
-              <a
-                className="text-gray-400 font-[600] hover:text-primaryColor"
-                href="#about"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-gray-400 font-[600] hover:text-primaryColor"
-                href="#services"
-              >
-                Services
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-gray-400 font-[600] hover:text-primaryColor"
-                href="#portfolio"
-              >
-                Work
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-gray-400 font-[600] hover:text-primaryColor"
-                href="#contact"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
       {/* footer top */}
       {/* footer bottom */}

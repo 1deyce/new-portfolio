@@ -1,15 +1,17 @@
 import React from "react";
 import "remixicon/fonts/remixicon.css";
 import "aos/dist/aos.css";
+import "../../styles/hero.css";
 import ReadMoreReact from "read-more-react";
+import heroImg from "../../assets/images/starry_window.svg";
 
 const Hero = () => {
   return (
     <section id="#home" className="bg-white dark:bg-black pt-0">
       <div className="container pt-14">
-        <div className="md:block items-center justify-between sm:flex-col md:flex-row">
+        <div className="md:flex items-center justify-between sm:flex-col md:flex-row">
           {/* hero left start */}
-          <div className="w-full md:basis-1/2">
+          <div className="w-full md:w-1/2">
             <h5
               data-aos="fade-right"
               data-aos-duration="1500"
@@ -54,11 +56,13 @@ const Hero = () => {
                 <i className="ri-apps-2-line"></i>
               </span>
               <ReadMoreReact
-                text={`I am a junior software developer and web developer with a passion for building efficient and user-friendly software solutions. My skills and experience span a variety of programming languages and technologies including front-end, back-end web, and mobile application development.
+                text={`
+                I am a junior software developer and web developer with a passion for building efficient and user-friendly software solutions. My skills and experience span a variety of programming languages and technologies including front-end, back-end web, and mobile application development.
                                             
-                    In addition to my technical skills, I am a strong communicator and collaborator. I believe that building strong relationships with clients and team members is key to the success of any project, and I am committed to open communication and transparency throughout the development process.
-                    
-                    Please take some time to browse my portfolio and explore some of the projects I have worked on. Please don't hesitate to get in touch, I look forward to hearing from you and working together to build something great!`}
+                In addition to my technical skills, I am a strong communicator and collaborator. I believe that building strong relationships with clients and team members is key to the success of any project, and I am committed to open communication and transparency throughout the development process.
+                
+                Take some time to browse my portfolio and explore some of the projects I have worked on. Please don't hesitate to get in touch, I look forward to hearing from you and working together to build something great!
+                `}
                 min={80}
                 ideal={100}
                 max={200}
@@ -99,6 +103,17 @@ const Hero = () => {
             </div>
           </div>
           {/* Hero left end */}
+          {/* Hero img */}
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            className="md:basis-1/2 flex sm:ml-0 text-center mt-10 flex-wrap gap-3 md:mt-0 md:flex-col justify-center md:text-end"
+          >
+            <figure className="flex items-center justify-center">
+              <img src={heroImg} alt="" className="gradient w-72 h-72" />
+            </figure>
+          </div>
+          {/* Hero img */}
         </div>
       </div>
     </section>
