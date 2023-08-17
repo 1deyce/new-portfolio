@@ -1,6 +1,49 @@
-import React from "react";
-
+import React, { useState } from "react";
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
+import firebaseConfig from "../../firebaseConfig";
 const Contact = () => {
+  // Initialize Firebase app
+  const app = firebase.initializeApp(firebaseConfig);
+
+  // Initialize Firestore
+  const firestore = firebase.firestore(app);
+
+  const [formState, setFormState] = useState({
+    fullName: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleInputChange = (e) => {
+    setFormState({
+      ...formState,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    firestore
+      .collection("messages")
+      .add({
+        ...formState,
+      })
+      .then(() => {
+        console.log("Message added to Firestore");
+        setFormState({
+          fullName: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.error("Error adding message to Firestore: ", error);
+      });
+  };
   return (
     <section id="contact" className="bg-white dark:bg-black pt-16 pb-20">
       <div className="container">
@@ -48,13 +91,15 @@ const Contact = () => {
             data-aos-duration="1000"
             className="w-full mt-8 md:mt-0 md:w-1/2 sm:h-[450px] lg:flex items-center bg-[#cfeeff] dark:bg-black px-4 lg:px-8 py-8 rounded-xl md:rounded-r-xl"
           >
-            <form className="w-full">
+            <form onSubmit={handleSubmit} className="w-full">
               <div className="mb-5">
                 <input
                   type="text"
                   placeholder="Enter your name"
                   className="w-full p-3 focus:outline-none rounded-[5px] dark:bg-[#2b2d33] dark:text-white"
                   name="fullName"
+                  value={formState.fullName}
+                  onChange={handleInputChange}
                   required
                 />
               </div>
@@ -64,6 +109,8 @@ const Contact = () => {
                   placeholder="Enter your email"
                   className="w-full p-3 focus:outline-none rounded-[5px] dark:bg-[#2b2d33] dark:text-white"
                   name="email"
+                  value={formState.email}
+                  onChange={handleInputChange}
                   required
                 />
               </div>
@@ -73,6 +120,8 @@ const Contact = () => {
                   placeholder="Subject"
                   className="w-full p-3 focus:outline-none rounded-[5px] dark:bg-[#2b2d33] dark:text-white"
                   name="subject"
+                  value={formState.subject}
+                  onChange={handleInputChange}
                   required
                 />
               </div>
@@ -84,6 +133,8 @@ const Contact = () => {
                   placeholder="Write your message"
                   className="w-full p-3 focus:outline-none rounded-[5px] dark:bg-[#2b2d33] dark:text-white resize-none"
                   name="message"
+                  value={formState.message}
+                  onChange={handleInputChange}
                   required
                 />
               </div>
