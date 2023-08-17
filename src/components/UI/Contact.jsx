@@ -91,7 +91,7 @@ const Contact = () => {
             data-aos-duration="1000"
             className="w-full mt-8 md:mt-0 md:w-1/2 sm:h-[450px] lg:flex items-center bg-[#cfeeff] dark:bg-black px-4 lg:px-8 py-8 rounded-xl md:rounded-r-xl"
           >
-            <form className="w-full">
+            <form onSubmit={handleSubmit} className="w-full">
               <div className="mb-5">
                 <input
                   type="text"
@@ -99,7 +99,7 @@ const Contact = () => {
                   className="w-full p-3 focus:outline-none rounded-[5px] dark:bg-[#2b2d33] dark:text-white"
                   name="fullName"
                   value={formState.fullName}
-                  onChange={handleInputChange}
+                  onChange={(e) => handleInputChange(e)}
                   required
                 />
               </div>
@@ -110,7 +110,7 @@ const Contact = () => {
                   className="w-full p-3 focus:outline-none rounded-[5px] dark:bg-[#2b2d33] dark:text-white"
                   name="email"
                   value={formState.email}
-                  onChange={handleInputChange}
+                  onChange={(e) => handleInputChange(e)}
                   required
                 />
               </div>
@@ -121,7 +121,7 @@ const Contact = () => {
                   className="w-full p-3 focus:outline-none rounded-[5px] dark:bg-[#2b2d33] dark:text-white"
                   name="subject"
                   value={formState.subject}
-                  onChange={handleInputChange}
+                  onChange={(e) => handleInputChange(e)}
                   required
                 />
               </div>
@@ -134,14 +134,13 @@ const Contact = () => {
                   className="w-full p-3 focus:outline-none rounded-[5px] dark:bg-[#2b2d33] dark:text-white resize-none"
                   name="message"
                   value={formState.message}
-                  onChange={handleInputChange}
+                  onChange={(e) => handleInputChange(e)}
                   required
                 />
               </div>
 
               <button
-                type="button"
-                onClick={handleSubmit}
+                type="submit"
                 className="w-full p-3 focus:outline-none rounded-[10px] bg-primaryColor dark:bg-primaryColor text-white hover:bg-secondaryColor dark:hover:bg-white dark:hover:text-secondaryColor text-center ease-linear duration-150 font-[600]"
               >
                 Send Message
