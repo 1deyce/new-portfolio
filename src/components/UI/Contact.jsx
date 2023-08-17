@@ -91,7 +91,7 @@ const Contact = () => {
             data-aos-duration="1000"
             className="w-full mt-8 md:mt-0 md:w-1/2 sm:h-[450px] lg:flex items-center bg-[#cfeeff] dark:bg-black px-4 lg:px-8 py-8 rounded-xl md:rounded-r-xl"
           >
-            <form onSubmit={handleSubmit} className="w-full">
+            <form className="w-full">
               <div className="mb-5">
                 <input
                   type="text"
@@ -140,7 +140,8 @@ const Contact = () => {
               </div>
 
               <button
-                type="submit"
+                type="button"
+                onClick={handleSubmit}
                 className="w-full p-3 focus:outline-none rounded-[10px] bg-primaryColor dark:bg-primaryColor text-white hover:bg-secondaryColor dark:hover:bg-white dark:hover:text-secondaryColor text-center ease-linear duration-150 font-[600]"
               >
                 Send Message
