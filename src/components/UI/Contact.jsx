@@ -140,7 +140,7 @@ const Contact = () => {
               </div>
 
               <button
-                onClick={handleSubmit}
+                type="submit"
                 className="w-full p-3 focus:outline-none rounded-[10px] bg-primaryColor dark:bg-primaryColor text-white hover:bg-secondaryColor dark:hover:bg-white dark:hover:text-secondaryColor text-center ease-linear duration-150 font-[600]"
               >
                 Send Message
