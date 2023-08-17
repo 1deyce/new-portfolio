@@ -39,6 +39,7 @@ const Contact = () => {
           subject: "",
           message: "",
         });
+        e.target.reset();
       })
       .catch((error) => {
         console.error("Error adding message to Firestore: ", error);
