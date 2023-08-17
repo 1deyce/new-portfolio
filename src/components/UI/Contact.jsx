@@ -16,14 +16,14 @@ const Contact = () => {
     message: "",
   });
 
-  const handleInputChange = (e) => {
+  const handleInputChange = async (e) => {
     setFormState({
       ...formState,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     firestore
