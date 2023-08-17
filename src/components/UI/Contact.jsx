@@ -26,25 +26,24 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    firestore
-      .collection("messages")
-      .add({
+    try {
+      await firestore.collection("messages").add({
         ...formState,
-      })
-      .then(() => {
-        console.log("Message added to Firestore");
-        setFormState({
-          fullName: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
-        e.target.reset();
-      })
-      .catch((error) => {
-        console.error("Error adding message to Firestore: ", error);
       });
+
+      console.log("Message added to Firestore");
+      setFormState({
+        fullName: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+      e.target.reset();
+    } catch (error) {
+      console.error("Error adding message to Firestore: ", error);
+    }
   };
+
   return (
     <section id="contact" className="bg-white dark:bg-black pt-16 pb-20">
       <div className="container">
