@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
-import { initializeApp } from "firebase/app";
+import firebaseConfig from "../../firebaseConfig";
 const Contact = () => {
   // Initialize Firebase app
-  const app = initializeApp();
+  const app = firebase.initializeApp(firebaseConfig);
 
   // Initialize Firestore
   const firestore = firebase.firestore(app);
