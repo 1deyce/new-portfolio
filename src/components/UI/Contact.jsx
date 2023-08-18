@@ -1,47 +1,28 @@
 import React, { useState } from "react";
-import firebase from "firebase/compat/app";
-import "firebase/compat/firestore";
-import firebaseConfig from "../../firebaseConfig";
+import { collection, addDoc } from "firebase/firestore/lite";
+import { db } from "./firebaseConfig";
 const Contact = () => {
-  // Initialize Firebase app
-  const app = firebase.initializeApp(firebaseConfig);
-
-  // Initialize Firestore
-  const firestore = firebase.firestore(app);
-
-  const [formState, setFormState] = useState({
-    fullName: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleInputChange = async (e) => {
-    setFormState({
-      ...formState,
-      [e.target.name]: e.target.value,
-    });
-  };
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      await firestore.collection("messages").add({
-        ...formState,
-      });
+    await addDoc(collection(db, "messages"), {
+      fullName,
+      email,
+      subject,
+      message,
+      // Add any other fields you want to store
+    });
 
-      console.log("Message added to Firestore");
-      setFormState({
-        fullName: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-      e.target.reset();
-    } catch (error) {
-      console.error("Error adding message to Firestore: ", error);
-    }
+    // Clear the form
+    setFullName("");
+    setEmail("");
+    setSubject("");
+    setMessage("");
   };
 
   return (
@@ -98,8 +79,8 @@ const Contact = () => {
                   placeholder="Enter your name"
                   className="w-full p-3 focus:outline-none rounded-[5px] dark:bg-[#2b2d33] dark:text-white"
                   name="fullName"
-                  value={formState.fullName}
-                  onChange={(e) => handleInputChange(e)}
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
                   required
                 />
               </div>
@@ -109,8 +90,8 @@ const Contact = () => {
                   placeholder="Enter your email"
                   className="w-full p-3 focus:outline-none rounded-[5px] dark:bg-[#2b2d33] dark:text-white"
                   name="email"
-                  value={formState.email}
-                  onChange={(e) => handleInputChange(e)}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                 />
               </div>
@@ -120,8 +101,8 @@ const Contact = () => {
                   placeholder="Subject"
                   className="w-full p-3 focus:outline-none rounded-[5px] dark:bg-[#2b2d33] dark:text-white"
                   name="subject"
-                  value={formState.subject}
-                  onChange={(e) => handleInputChange(e)}
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
                   required
                 />
               </div>
@@ -133,15 +114,14 @@ const Contact = () => {
                   placeholder="Write your message"
                   className="w-full p-3 focus:outline-none rounded-[5px] dark:bg-[#2b2d33] dark:text-white resize-none"
                   name="message"
-                  value={formState.message}
-                  onChange={(e) => handleInputChange(e)}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   required
                 />
               </div>
 
               <button
                 type="submit"
-                onClick={handleSubmit}
                 className="w-full p-3 focus:outline-none rounded-[10px] bg-primaryColor dark:bg-primaryColor text-white hover:bg-secondaryColor dark:hover:bg-white dark:hover:text-secondaryColor text-center ease-linear duration-150 font-[600]"
               >
                 Send Message
