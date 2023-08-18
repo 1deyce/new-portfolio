@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ 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 }}'
-          firebaseServiceAccount: '${{ firebase-adminsdk-53sgp@react-portfolio-1543f.iam.gserviceaccount.com }}'
+          repoToken: '${{ secrets.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 }}'
+          firebaseServiceAccount: '${{ secrets.firebase-adminsdk-53sgp@react-portfolio-1543f.iam.gserviceaccount.com }}'
           channelId: live
           projectId: react-portfolio-1543f
