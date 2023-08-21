@@ -6,9 +6,18 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [success, setSuccess] = useState(false);
+
+  const isEmailValid = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!isEmailValid.test(email)) {
+      // Invalid email, don't submit
+      alert("Please enter a valid email.");
+      return;
+    }
 
     await addDoc(collection(db, "messages"), {
       fullName,
@@ -23,6 +32,8 @@ const Contact = () => {
     setEmail("");
     setSubject("");
     setMessage("");
+
+    setSuccess(true);
   };
 
   return (
@@ -126,6 +137,9 @@ const Contact = () => {
               >
                 Send Message
               </button>
+              {success && (
+                <p className="mt-4 text-green-500">Email sent successfully!</p>
+              )}
             </form>
           </div>
         </div>
