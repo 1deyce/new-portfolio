@@ -1,5 +1,4 @@
 import { initializeApp }  from  "firebase/app";
-import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
 import { getFirestore } from "firebase/firestore/lite";
  
 const firebaseConfig = ({
@@ -13,7 +12,4 @@ const firebaseConfig = ({
 });
 
 const app = initializeApp(firebaseConfig);
-const appCheck = initializeAppCheck(app, {
-  provider: new ReCaptchaV3Provider('6LdtSccnAAAAAG2UMMNiJqw-ubOQzuSLfjUtxMct')
-})
 export const db = getFirestore(app);
