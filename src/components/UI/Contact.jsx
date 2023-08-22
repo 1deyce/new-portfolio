@@ -11,7 +11,7 @@ const Contact = () => {
 
   // ReCaptcha
   const [captchaIsDone, setCaptchaIsDone] = useState(false);
-  const key = "6Leh98YnAAAAANVfTTUv9rkl0FLWZLcbClOgvaSe";
+  const key = "6LdtSccnAAAAAG2UMMNiJqw-ubOQzuSLfjUtxMct";
 
   function onChange() {
     setCaptchaIsDone(true);
