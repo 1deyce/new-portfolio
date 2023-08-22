@@ -1,12 +1,22 @@
 import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore/lite";
 import { db } from "./firebaseConfig";
+import ReCAPTCHA from "react-google-recaptcha";
+import { googleCaptchaSiteKey } from "./utilities";
 const Contact = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState(false);
+
+  // ReCaptcha
+  const [captchaIsDone, setCaptchaIsDone] = useState(false);
+  const key = { googleCaptchaSiteKey };
+
+  function onChange() {
+    setCaptchaIsDone(true);
+  }
 
   const isEmailValid = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
 
@@ -117,7 +127,6 @@ const Contact = () => {
                   required
                 />
               </div>
-
               <div className="mb-5">
                 <textarea
                   type="text"
@@ -130,15 +139,22 @@ const Contact = () => {
                   required
                 />
               </div>
-
-              <button
-                type="submit"
-                className="w-full p-3 focus:outline-none rounded-[10px] bg-primaryColor dark:bg-primaryColor text-white hover:bg-secondaryColor dark:hover:bg-white dark:hover:text-secondaryColor text-center ease-linear duration-150 font-[600]"
+              {captchaIsDone && (
+                <button
+                  type="submit"
+                  className="w-full p-3 focus:outline-none rounded-[10px] bg-primaryColor dark:bg-primaryColor text-white hover:bg-secondaryColor dark:hover:bg-white dark:hover:text-secondaryColor text-center ease-linear duration-150 font-[600]"
+                >
+                  Send Message
+                </button>
+              )}
+              <div
+                className="mb-0"
+                style={{ visibility: captchaIsDone ? "hidden" : "visible" }}
               >
-                Send Message
-              </button>
+                <ReCAPTCHA sitekey={key} onChange={onChange} />
+              </div>
               {success && (
-                <p className="mt-4 text-green-500">Email sent successfully!</p>
+                <p className="text-primaryColor">Email sent successfully!</p>
               )}
             </form>
           </div>
