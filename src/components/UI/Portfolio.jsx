@@ -27,7 +27,11 @@ const Portfolio = () => {
         className="mx-20 flex justify-around"
       >
         <div className="max-w-sm bg-white dark:border-black rounded-2xl dark:bg-black hover:shadow-md">
-          <img className="rounded-2xl pt-1 px-1" src={Img} alt="" />
+          <img
+            className="cursor-pointer hover:scale-110 transition duration-300 ease-in-out rounded-2xl pt-1 px-1"
+            src={Img}
+            alt=""
+          />
           <div className="p-5 text-center">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-primaryColor dark:text-primaryColor">
               Fitness Trainer Website
