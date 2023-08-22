@@ -12,6 +12,7 @@ import react from "../../assets/images/physics.png";
 import figma from "../../assets/images/figma.png";
 import git from "../../assets/images/git.png";
 import github from "../../assets/images/github.png";
+import firebase from "../../assets/images/firebase.png";
 
 const Services = () => {
   const images = [
@@ -25,6 +26,7 @@ const Services = () => {
     python,
     git,
     github,
+    firebase,
   ];
 
   return (
@@ -111,10 +113,10 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Infinite Slider */}
+        {/* Infinite Slider start */}
         <div className="flex items-center min-h-[200px] justify-center">
           <div className="w-full h-24 border-t border-b border-white dark:border-black overflow-hidden relative">
-            <div className="md:w-[200%] w-[400%] flex items-center h-24 absolute left-0 animate gap-1">
+            <div className="md:w-[200%] w-[400%] flex items-center h-24 absolute left-0 animate gap-0">
               {images.concat(images).map((image, index) => {
                 return (
                   <div
@@ -122,7 +124,7 @@ const Services = () => {
                     className="flex justify-center items-start w-full"
                   >
                     <img
-                      className="h-10 w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16"
+                      className="h-10 w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 xl:h-14 xl:w-14"
                       src={image}
                       alt=""
                     />
@@ -132,6 +134,7 @@ const Services = () => {
             </div>
           </div>
         </div>
+        {/* Infinite Slider end */}
       </div>
     </section>
   );
