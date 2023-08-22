@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore/lite";
 import { db } from "./firebaseConfig";
 import ReCAPTCHA from "react-google-recaptcha";
-import { googleCaptchaSecretKey } from "./utilities";
 const Contact = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -12,7 +11,7 @@ const Contact = () => {
 
   // ReCaptcha
   const [captchaIsDone, setCaptchaIsDone] = useState(false);
-  const key = { googleCaptchaSecretKey };
+  const key = "6Leh98YnAAAAANVfTTUv9rkl0FLWZLcbClOgvaSe";
 
   function onChange() {
     setCaptchaIsDone(true);
