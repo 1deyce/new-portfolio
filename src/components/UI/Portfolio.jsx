@@ -49,11 +49,17 @@ const Portfolio = () => {
             isOpen={isModalOpen}
             onRequestClose={closeModal}
             contentLabel="Image Modal"
-            className="modal dark:bg-black"
+            className="modal bg-black"
             overlayClassName="modal-overlay"
           >
             <div className="modal-content">
               <img src={Img} alt="" className="modal-image" />
+              <button
+                onClick={closeModal}
+                className="absolute top-2 right-2 text-gray-300 hover:text-primaryColor text-[30px] hover:scale-125"
+              >
+                <span>&times;</span>
+              </button>
             </div>
           </Modal>
           <div className="p-5 text-center">
