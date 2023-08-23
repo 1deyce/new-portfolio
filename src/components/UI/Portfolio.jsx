@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "aos/dist/aos.css";
+import "../../styles/modal.css";
 import Img from "../../assets/images/portfolio-011.jpg";
+import Modal from "react-modal";
 
 const Portfolio = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <section id="portfolio" className="bg-white dark:bg-black pt-20 pb-20">
       <div className="container mb-20">
@@ -31,7 +43,19 @@ const Portfolio = () => {
             className="cursor-pointer hover:scale-110 transition duration-300 ease-in-out rounded-2xl pt-1 px-1"
             src={Img}
             alt=""
+            onClick={openModal}
           />
+          <Modal
+            isOpen={isModalOpen}
+            onRequestClose={closeModal}
+            contentLabel="Image Modal"
+            className="modal dark:bg-black"
+            overlayClassName="modal-overlay"
+          >
+            <div className="modal-content">
+              <img src={Img} alt="" className="modal-image" />
+            </div>
+          </Modal>
           <div className="p-5 text-center">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-primaryColor dark:text-primaryColor">
               Fitness Trainer Website

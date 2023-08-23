@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore/lite";
-import { db, auth } from "./firebaseConfig";
+import { db } from "./firebaseConfig";
 import ReCAPTCHA from "react-google-recaptcha";
-import { RecaptchaVerifier } from "firebase/auth";
 const Contact = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -12,23 +11,11 @@ const Contact = () => {
 
   // ReCaptcha
   const [captchaIsDone, setCaptchaIsDone] = useState(false);
-  const key = "6LdtSccnAAAAAG2UMMNiJqw-ubOQzuSLfjUtxMct";
+  const key = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
 
-  function OnChange() {
-    useEffect(() => {
-      window.recaptchaVerifier = new RecaptchaVerifier(
-        "recaptcha-container",
-        {
-          size: "invisible",
-          callback: function (response) {
-            // reCAPTCHA solved.
-            setCaptchaIsDone(true);
-          },
-        },
-        auth
-      );
-    }, []);
-  }
+  const handleCaptchaChange = () => {
+    setCaptchaIsDone(true);
+  };
 
   const isEmailValid = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
 
@@ -163,7 +150,7 @@ const Contact = () => {
                 className="mb-0"
                 style={{ visibility: captchaIsDone ? "hidden" : "visible" }}
               >
-                <ReCAPTCHA sitekey={key} onChange={OnChange} />
+                <ReCAPTCHA sitekey={key} onChange={handleCaptchaChange} />
               </div>
               {success && (
                 <p className="text-primaryColor">Email sent successfully!</p>
