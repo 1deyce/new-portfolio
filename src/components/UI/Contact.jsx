@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore/lite";
 import { db } from "./firebaseConfig";
 import ReCAPTCHA from "react-google-recaptcha";
+
 const Contact = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState(false);
+  const [captchaIsDone, setCaptchaIsDone] = useState(false);
 
   // ReCaptcha
-  const [captchaIsDone, setCaptchaIsDone] = useState(false);
-  const key = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
+  const key = "6LdtSccnAAAAAG2UMMNiJqw-ubOQzuSLfjUtxMct";
 
   const handleCaptchaChange = () => {
     setCaptchaIsDone(true);
@@ -28,21 +29,37 @@ const Contact = () => {
       return;
     }
 
-    await addDoc(collection(db, "messages"), {
-      fullName,
-      email,
-      subject,
-      message,
-      // Add any other fields you want to store
+    await fetch("http://localhost:3000/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        fullName,
+        email,
+        subject,
+        message,
+      }),
     });
 
-    // Clear the form
-    setFullName("");
-    setEmail("");
-    setSubject("");
-    setMessage("");
+    try {
+      await addDoc(collection(db, "messages"), {
+        fullName,
+        email,
+        subject,
+        message,
+      });
 
-    setSuccess(true);
+      // Clear the form
+      setFullName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+
+      setSuccess(true);
+    } catch (error) {
+      console.error("Error adding document: ", error);
+    }
   };
 
   return (
