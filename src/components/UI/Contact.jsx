@@ -3,6 +3,7 @@ import { collection, addDoc } from "firebase/firestore/lite";
 import { db } from "./firebaseConfig";
 import ReCAPTCHA from "react-google-recaptcha";
 
+const key = "6Leh98YnAAAAANVfTTUv9rkl0FLWZLcbClOgvaSe";
 const Contact = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -10,9 +11,7 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState(false);
   const [captchaIsDone, setCaptchaIsDone] = useState(null);
-
-  // ReCaptcha
-  const key = "6Leh98YnAAAAANVfTTUv9rkl0FLWZLcbClOgvaSe";
+  
 
   const handleCaptchaChange = () => {
     setCaptchaIsDone(true);
