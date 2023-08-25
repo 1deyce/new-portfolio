@@ -3,7 +3,7 @@ import { collection, addDoc } from "firebase/firestore/lite";
 import { db } from "./firebaseConfig";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const key = "6Leh98YnAAAAAPD5QtdB1iWkWzB29ELPsKP3t_MY";
+const key = "6LfXXtMnAAAAAAwm1r3zNSHpqL9f1LflAfdDjirq";
 const Contact = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
