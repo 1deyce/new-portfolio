@@ -29,7 +29,7 @@ const Contact = () => {
       return;
     }
 
-    await fetch("http://localhost:3000/send", {
+    await fetch("https://react-portfolio-1543f.cloudfunctions.net/sendEmail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
