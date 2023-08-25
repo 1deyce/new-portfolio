@@ -47,6 +47,7 @@ const Contact = () => {
         email,
         subject,
         message,
+        captchaIsDone
       });
 
       // Clear the form
