@@ -11,16 +11,16 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState(false);
   const [captchaIsDone, setCaptchaIsDone] = useState(null);
-  
-  if (!captchaIsDone) {
-    alert("Please complete the reCAPTCHA.")
-    return;
-  }
 
   const isEmailValid = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!captchaIsDone) {
+      alert("Please complete the reCAPTCHA.")
+      return;
+    }
 
     if (!isEmailValid.test(email)) {
       // Invalid email, don't submit
