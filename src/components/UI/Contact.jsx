@@ -9,7 +9,7 @@ const Contact = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState(false);
-  const [captchaIsDone, setCaptchaIsDone] = useState(false);
+  const [captchaIsDone, setCaptchaIsDone] = useState(null);
 
   // ReCaptcha
   const key = "6LdtSccnAAAAAG2UMMNiJqw-ubOQzuSLfjUtxMct";
@@ -167,7 +167,7 @@ const Contact = () => {
                 className="mb-0"
                 style={{ visibility: captchaIsDone ? "hidden" : "visible" }}
               >
-                <ReCAPTCHA sitekey={key} onChange={handleCaptchaChange} />
+                <ReCAPTCHA sitekey={key} onChange={(value) => handleCaptchaChange(value)} />
               </div>
               {success && (
                 <p className="text-primaryColor">Email sent successfully!</p>
