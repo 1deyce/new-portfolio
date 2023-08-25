@@ -12,10 +12,10 @@ const Contact = () => {
   const [success, setSuccess] = useState(false);
   const [captchaIsDone, setCaptchaIsDone] = useState(null);
   
-
-  const handleCaptchaChange = () => {
-    setCaptchaIsDone(true);
-  };
+  if (!captchaIsDone) {
+    alert("Please complete the reCAPTCHA.")
+    return;
+  }
 
   const isEmailValid = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
 
@@ -166,7 +166,7 @@ const Contact = () => {
                 className="mb-0"
                 style={{ visibility: captchaIsDone ? "hidden" : "visible" }}
               >
-                <ReCAPTCHA sitekey={key} onChange={(value) => handleCaptchaChange(value)} />
+                <ReCAPTCHA sitekey={key} onChange={(value) => setCaptchaIsDone(value)} />
               </div>
               {success && (
                 <p className="text-primaryColor">Email sent successfully!</p>
