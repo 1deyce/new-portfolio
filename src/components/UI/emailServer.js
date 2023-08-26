@@ -8,7 +8,9 @@ const cors = require("cors");
 const emailjs = require("emailjs-com");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: "https://react-portfolio-1543f.web.app"
+}));
 app.use(express.json());
 
 emailjs.init(EMAILJS_USER_ID);

@@ -37,7 +37,7 @@ const Contact = () => {
     };
 
     try {
-      await axios.post("https://react-portfolio-1543f.web.app/api/sendEmail", data);
+      await axios.post("https://react-portfolio-1543f.web.app/sendEmail", data);
       console.log("Email sent successfully");
       // Perform any additional actions after the email is sent
     } catch (error) {
