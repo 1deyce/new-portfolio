@@ -1,46 +1,44 @@
-const functions = require("firebase-functions");
-const nodemailer = require("nodemailer");
-const cors = require("cors")({
-    origin: true
-});
-require('dotenv').config();
+import EMAILJS_USER_ID from "../../.env";
+import EMAILJS_SERVICE_ID from "../../.env";
+import EMAILJS_TEMPLATE_ID from "../../.env";
 
-const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: "465",
-    secure: true,
-    auth: {
-        user: "keenandeyce@gmail.com",
-        pass: process.env.APP_PASSWORD,
-    },
-});
+require("dotenv").config();
+const express = require("express");
+const cors = require("cors");
+const emailjs = require("emailjs-com");
 
-// Define the Cloud Function
-exports.sendEmail = functions.https.onRequest(async (req, res) => {
-    cors(req, res, () => {
-        const { fullName, email, subject, message } = req.body;
+const app = express();
+app.use(cors());
+app.use(express.json());
 
-        const mailOptions = {
-            from: email,
-            to: "keenandeyce@gmail.com",
-            subject: `Message from ${fullName}: ${subject}`,
-            text: message,
-        };
+emailjs.init(EMAILJS_USER_ID);
 
-        try {
-            // Send the email
-            transporter.sendMail(mailOptions, (error, info) => {
-                if (error) {
-                    console.error("Error sending email:", error);
-                    res.status(500).send("An error occurred while sending the email");
-                } else {
-                    console.log("Email sent successfully");
-                    res.status(200).send("Email sent successfully");
-                }
-            });
-        } catch (error) {
+app.post("/sendEmail", (req, res) => {
+    const { fullName, email, subject, message } = req.body;
+
+    const templateParams = {
+        from_name: fullName,
+        from_email: email,
+        from_subject: subject,
+        message: message,
+    };
+
+    emailjs
+        .send(
+            EMAILJS_SERVICE_ID,
+            EMAILJS_TEMPLATE_ID,
+            templateParams
+        )
+        .then(() => {
+            console.log("Email sent successfully");
+            res.status(200).send("Email sent successfully");
+        })
+        .catch((error) => {
             console.error("Error sending email:", error);
             res.status(500).send("An error occurred while sending the email");
-        }
-    });
+        });
+});
+
+app.listen(3000, () => {
+    console.log("Server is running on port 3000");
 });

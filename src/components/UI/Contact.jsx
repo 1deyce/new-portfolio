@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore/lite";
 import { db } from "./firebaseConfig";
 import ReCAPTCHA from "react-google-recaptcha";
+import CAPTCHA_KEY from "../../.env";
+import axios from "axios";
 
-const key = "6LfXXtMnAAAAAAwm1r3zNSHpqL9f1LflAfdDjirq";
 const Contact = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -28,18 +29,21 @@ const Contact = () => {
       return;
     }
 
-    await fetch("https://react-portfolio-1543f.cloudfunctions.net/sendEmail", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        fullName,
-        email,
-        subject,
-        message,
-      }),
-    });
+    const data = {
+      fullName,
+      email,
+      subject,
+      message,
+    };
+
+    try {
+      await axios.post("https://react-portfolio-1543f.web.app/api/sendEmail", data);
+      console.log("Email sent successfully");
+      // Perform any additional actions after the email is sent
+    } catch (error) {
+      console.error("Error sending email:", error);
+      // Handle any errors that occur during email sending
+    }
 
     try {
       await addDoc(collection(db, "messages"), {
@@ -47,7 +51,6 @@ const Contact = () => {
         email,
         subject,
         message,
-        captchaIsDone
       });
 
       // Clear the form
@@ -167,7 +170,7 @@ const Contact = () => {
                 className="mb-0"
                 style={{ visibility: captchaIsDone ? "hidden" : "visible" }}
               >
-                <ReCAPTCHA sitekey={key} onChange={(value) => setCaptchaIsDone(value)} />
+                <ReCAPTCHA sitekey={CAPTCHA_KEY} onChange={(value) => setCaptchaIsDone(value)} />
               </div>
               {success && (
                 <p className="text-primaryColor">Email sent successfully!</p>

@@ -179,7 +179,7 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <span
               onClick={toggleMenu}
-              className="text-2xl text-secondaryColor dark:text-white md:hidden cursor-pointer"
+              className="text-2xl text-secondaryColor dark:text-white cursor-pointer"
             >
               <i className="ri-menu-line"></i>
             </span>
