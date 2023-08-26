@@ -113,7 +113,7 @@ const Hero = () => {
               <img src={heroImg} alt="" className="gradient w-72 h-72" />
             </figure>
           </div>
-          {/* Hero img */}
+          {/* Hero img. */}
         </div>
       </div>
     </section>
