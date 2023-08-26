@@ -1,7 +1,3 @@
-import EMAILJS_USER_ID from "../../.env";
-import EMAILJS_SERVICE_ID from "../../.env";
-import EMAILJS_TEMPLATE_ID from "../../.env";
-
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
@@ -13,7 +9,7 @@ app.use(cors({
 }));
 app.use(express.json());
 
-emailjs.init(EMAILJS_USER_ID);
+emailjs.init(process.env.EMAILJS_USER_ID);
 
 app.post("/sendEmail", (req, res) => {
     const { fullName, email, subject, message } = req.body;
@@ -27,8 +23,8 @@ app.post("/sendEmail", (req, res) => {
 
     emailjs
         .send(
-            EMAILJS_SERVICE_ID,
-            EMAILJS_TEMPLATE_ID,
+            process.env.EMAILJS_SERVICE_ID,
+            process.env.EMAILJS_TEMPLATE_ID,
             templateParams
         )
         .then(() => {

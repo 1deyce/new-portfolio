@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore/lite";
 import { db } from "./firebaseConfig";
 import ReCAPTCHA from "react-google-recaptcha";
-import CAPTCHA_KEY from "../../.env";
 import axios from "axios";
 
 const Contact = () => {
@@ -170,7 +169,7 @@ const Contact = () => {
                 className="mb-0"
                 style={{ visibility: captchaIsDone ? "hidden" : "visible" }}
               >
-                <ReCAPTCHA sitekey={CAPTCHA_KEY} onChange={(value) => setCaptchaIsDone(value)} />
+                <ReCAPTCHA sitekey={process.env.CAPTCHA_KEY} onChange={(value) => setCaptchaIsDone(value)} />
               </div>
               {success && (
                 <p className="text-primaryColor">Email sent successfully!</p>
