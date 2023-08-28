@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore/lite";
 import { db } from "./firebaseConfig";
 import ReCAPTCHA from "react-google-recaptcha";
+import { Await } from "react-router-dom";
+import axios from "axios";
 
 const Contact = () => {
   const [fullName, setFullName] = useState("");
@@ -28,6 +30,13 @@ const Contact = () => {
     }
 
     try {
+      await axios.post("/sendEmail", {
+        fullName,
+        email,
+        subject,
+        message,
+      });
+
       await addDoc(collection(db, "messages"), {
         fullName,
         email,
