@@ -169,7 +169,7 @@ const Contact = () => {
                 <ReCAPTCHA sitekey={key} onChange={(value) => setCaptchaIsDone(value)} />
               </div>
               {success && (
-                <p className="text-primaryColor">Email sent successfully!</p>
+                <p className="text-primaryColor">Email sent successfully.</p>
               )}
             </form>
           </div>
