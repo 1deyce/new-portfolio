@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore/lite";
 import { db } from "./firebaseConfig";
 import ReCAPTCHA from "react-google-recaptcha";
-require('dotenv').config();
+// require("dotenv").config();
 const Contact = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -12,7 +12,7 @@ const Contact = () => {
   const [captchaIsDone, setCaptchaIsDone] = useState(null);
 
   const isEmailValid = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
-  const key = process.env.CAPTCHA_KEY;
+  const key = "6LfXXtMnAAAAAAwm1r3zNSHpqL9f1LflAfdDjirq";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
