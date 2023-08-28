@@ -30,11 +30,17 @@ const Contact = () => {
     }
 
     try {
-      await axios.post("/sendEmail", {
-        fullName,
-        email,
-        subject,
-        message,
+      await fetch("/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fullName,
+          email,
+          subject,
+          message,
+        })
       });
 
       await addDoc(collection(db, "messages"), {
