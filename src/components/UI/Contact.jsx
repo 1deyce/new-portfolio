@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore/lite";
 import { db } from "./firebaseConfig";
 import ReCAPTCHA from "react-google-recaptcha";
-import axios from "axios";
 
 const Contact = () => {
   const [fullName, setFullName] = useState("");
@@ -26,22 +25,6 @@ const Contact = () => {
       // Invalid email, don't submit
       alert("Please enter a valid email.");
       return;
-    }
-
-    const data = {
-      fullName,
-      email,
-      subject,
-      message,
-    };
-
-    try {
-      await axios.post("https://react-portfolio-1543f.web.app/sendEmail", data);
-      console.log("Email sent successfully");
-      // Perform any additional actions after the email is sent
-    } catch (error) {
-      console.error("Error sending email:", error);
-      // Handle any errors that occur during email sending
     }
 
     try {
