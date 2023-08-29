@@ -12,6 +12,7 @@ module.exports = {
             // "crypto": require.resolve("crypto-browserify"),
         },
     },
+    path
     // plugins: [
     //     new NodePolyfillPlugin(),
     // ],

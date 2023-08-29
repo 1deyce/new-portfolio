@@ -28,7 +28,7 @@ const Contact = () => {
     }
 
     try {
-      await fetch("/sendEmail", {
+      await fetch("https://react-portfolio-1543f.web.app/sendEmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

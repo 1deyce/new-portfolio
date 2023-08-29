@@ -1,21 +1,23 @@
 require("dotenv").config();
 const express = require('express');
-const sgMail = require('@sendgrid/mail');
+const cors = require("cors");
+const sgMail = require("@sendgrid/mail");
 
 sgMail.setApiKey(process.env.EMAIL_API);
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.post('/sendEmail', (req, res) => {
-    const { subject, message } = req.body;
+    const { subject, message, email, fullName } = req.body;
 
     const msg = {
         to: 'keenandeyce@gmail.com',
         from: 'keenandeyce@gmail.com',
         subject,
-        text: message,
-        html: `<strong>${message}</strong>`,
+        text: `Message from ${fullName} (${email}): ${message}`,
+        html: `<strong>Message from ${fullName} (${email}):</strong> ${message}`,
     };
 
     sgMail
