@@ -12,7 +12,7 @@ admin.initializeApp({
 
 let db = admin.firestore();
 
-let docRef = db.collection("messages").doc();
+let docRef = db.collection("messages");
 docRef.onSnapshot(querySnapshot => {
     querySnapshot.docChanges().forEach(change => {
         if (change.type === "added") {
