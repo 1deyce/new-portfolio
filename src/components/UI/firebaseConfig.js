@@ -1,7 +1,7 @@
-import { initializeApp }  from  "firebase/app";
+import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore/lite";
 import { getAuth } from "firebase/auth";
- 
+
 const firebaseConfig = ({
   apiKey: "AIzaSyAs-1kxBA066-7_GJXtQ2vhgOAYsJj5MV8",
   authDomain: "react-portfolio-1543f.firebaseapp.com",

@@ -12,18 +12,18 @@ import Portfolio from './components/UI/Portfolio';
 import Contact from './components/UI/Contact';
 import Footer from './components/Footer/Footer';
 
-function App() {   
+function App() {
   const isMobile = useMediaQuery({ maxWidth: '640px' });
   const [isloading, setIsLoading] = useState(true);
 
   useEffect(() => {
     document.title = "Keenan Deyce | Portfolio"
     Aos.init();
-    
+
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 2700); // value of delay length in ms.
-    
+
     return () => clearTimeout(timer);
   }, []);
 
@@ -37,7 +37,7 @@ function App() {
             color="#007ced"
             ariaLabel="triangle-loading"
             wrapperStyle={{}}
-            wrapperClassName="" 
+            wrapperClassName=""
             visible={true}
           />
         </div>
@@ -45,11 +45,11 @@ function App() {
         <div className={`min-h-screen ${isMobile ? 'overflow-x-hidden' : ''}`}>
           <Header />
           <main />
-            <Hero />
-            <About />
-            <Services />
-            <Portfolio />
-            <Contact />
+          <Hero />
+          <About />
+          <Services />
+          <Portfolio />
+          <Contact />
           <main />
           <Footer />
         </div>

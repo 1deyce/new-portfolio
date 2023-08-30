@@ -28,18 +28,18 @@ const Contact = () => {
     }
 
     try {
-      await fetch("https://react-portfolio-1543f.web.app/sendEmail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          fullName,
-          email,
-          subject,
-          message,
-        })
-      });
+      // await fetch("https://react-portfolio-1543f.web.app/sendEmail", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify({
+      //     fullName,
+      //     email,
+      //     subject,
+      //     message,
+      //   })
+      // });
 
       await addDoc(collection(db, "messages"), {
         fullName,
@@ -48,7 +48,6 @@ const Contact = () => {
         message,
       });
 
-      // Clear the form
       setFullName("");
       setEmail("");
       setSubject("");

@@ -1,37 +1,41 @@
 require("dotenv").config();
-const express = require('express');
-const cors = require("cors");
+const admin = require("firebase-admin");
 const sgMail = require("@sendgrid/mail");
 
 sgMail.setApiKey(process.env.EMAIL_API);
 
-const app = express();
-app.use(express.json());
-app.use(cors());
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY);
 
-app.post('/sendEmail', (req, res) => {
-    const { subject, message, email, fullName } = req.body;
-
-    const msg = {
-        to: 'keenandeyce@gmail.com',
-        from: 'keenandeyce@gmail.com',
-        subject,
-        text: `Message from ${fullName} (${email}): ${message}`,
-        html: `<strong>Message from ${fullName} (${email}):</strong> ${message}`,
-    };
-
-    sgMail
-        .send(msg)
-        .then(() => {
-            console.log('Email sent!');
-            res.sendStatus(200);
-        })
-        .catch((error) => {
-            console.error(error);
-            res.sendStatus(500);
-        });
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount)
 });
 
-app.listen(5000, () => {
-    console.log('Server is running on port 5000');
-});
+let db = admin.firestore();
+
+let docRef = db.collection("messages");
+docRef.onSnapshot(querySnapshot => {
+    querySnapshot.docChanges().forEach(change => {
+        if (change.type === "added") {
+            let data = change.doc.data();
+
+            const msg = {
+                to: 'keenandeyce@gmail.com',
+                from: 'keenandeyce@gmail.com',
+                subject: data['subject'],
+                text: `Message from ${data['fullName']} (${data['email']}): ${data['message']}`,
+                html: `<strong>Message from ${data['fullName']} (${data['email']}):</strong> ${data['message']}`,
+            };
+
+            sgMail
+                .send(msg)
+                .then(() => {
+                    console.log('Email sent!')
+                })
+                .catch((error) => {
+                    console.error(error)
+                })
+        }
+    });
+}, err => {
+    console.log(`Encountered error: ${err}`);
+}); 
