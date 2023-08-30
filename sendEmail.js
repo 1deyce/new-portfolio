@@ -12,7 +12,7 @@ admin.initializeApp({
 
 let db = admin.firestore();
 
-let docRef = db.collection("messages");
+let docRef = db.collection("messages").doc();
 docRef.onSnapshot(querySnapshot => {
     querySnapshot.docChanges().forEach(change => {
         if (change.type === "added") {
@@ -20,7 +20,7 @@ docRef.onSnapshot(querySnapshot => {
 
             const msg = {
                 to: 'keenandeyce@gmail.com',
-                from: 'keenandeyce@gmail.com',
+                from: data['email'],
                 subject: data['subject'],
                 text: `Message from ${data['fullName']} (${data['email']}): ${data['message']}`,
                 html: `<strong>Message from ${data['fullName']} (${data['email']}):</strong> ${data['message']}`,

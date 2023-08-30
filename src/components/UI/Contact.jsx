@@ -29,18 +29,18 @@ const Contact = () => {
     }
 
     try {
-      // await fetch("https://react-portfolio-1543f.web.app/sendEmail", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify({
-      //     fullName,
-      //     email,
-      //     subject,
-      //     message,
-      //   })
-      // });
+      await fetch("https://react-portfolio-1543f.web.app/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fullName,
+          email,
+          subject,
+          message,
+        })
+      });
 
       await addDoc(collection(db, "messages"), {
         fullName,
@@ -167,6 +167,7 @@ const Contact = () => {
               >
                 <ReCAPTCHA sitekey={key} onChange={(value) => setCaptchaIsDone(value)} />
               </div>
+              {/* this message should disappear after a few sec!NB */}
               {success && (
                 <p className="text-primaryColor">Email sent successfully.</p>
               )}
