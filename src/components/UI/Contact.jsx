@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore/lite";
 import { db } from "./firebaseConfig";
 import ReCAPTCHA from "react-google-recaptcha";
+import axios from "axios";
 
 const Contact = () => {
   const [fullName, setFullName] = useState("");
@@ -29,18 +30,18 @@ const Contact = () => {
     }
 
     try {
-      await fetch("https://react-portfolio-1543f.web.app/sendEmail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
+
+      axios({
+        method: 'post',
+        url: 'https://whateveriwanttocallit.onrender.com/test',
+        data: {
           fullName,
           email,
           subject,
           message,
-        })
-      });
+        }
+      })
+      
 
       await addDoc(collection(db, "messages"), {
         fullName,
