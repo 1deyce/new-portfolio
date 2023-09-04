@@ -30,8 +30,7 @@ const Contact = () => {
     }
 
     try {
-
-      axios({
+      axios ({
         method: 'post',
         url: 'https://whateveriwanttocallit.onrender.com/test',
         data: {
@@ -41,7 +40,6 @@ const Contact = () => {
           message,
         }
       })
-      
 
       await addDoc(collection(db, "messages"), {
         fullName,
