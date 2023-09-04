@@ -32,7 +32,7 @@ const Contact = () => {
     try {
       axios ({
         method: 'post',
-        url: 'https://agile-colt-waistcoat.cyclic.app/',
+        url: 'https://agile-colt-waistcoat.cyclic.app/email',
         data: {
           fullName,
           email,
