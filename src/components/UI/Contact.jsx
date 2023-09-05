@@ -30,13 +30,12 @@ const Contact = () => {
     }
 
     try {
-      axios.post('https://agile-colt-waistcoat.cyclic.app/email',{
-          fullName,
-          email,
-          subject,
-          message,
-        }
-      )
+      axios.post('https://agile-colt-waistcoat.cyclic.app/email', {
+        fullName,
+        email,
+        subject,
+        message,
+      });
 
       await addDoc(collection(db, "messages"), {
         fullName,
