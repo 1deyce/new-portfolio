@@ -12,6 +12,7 @@ const Contact = () => {
   const [success, setSuccess] = useState(false);
   const [isEmailValid, setIsEmailValid] = useState(false);
   const [captchaIsDone, setCaptchaIsDone] = useState(false);
+  const [showSubmitButton, setShowSubmitButton] = useState(false);
 
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const key = "6LfXXtMnAAAAAAwm1r3zNSHpqL9f1LflAfdDjirq";
@@ -156,7 +157,12 @@ const Contact = () => {
                   required
                 />
               </div>
-              {!captchaIsDone && (
+              <ReCAPTCHA sitekey={key} onChange={(value) => {
+                setCaptchaIsDone(value);
+                setShowSubmitButton(true);
+              }} />
+
+              {showSubmitButton && (
                 <button
                   type="submit"
                   className="w-full p-3 focus:outline-none rounded-[10px] bg-primaryColor dark:bg-primaryColor text-white hover:bg-secondaryColor dark:hover:bg-white dark:hover:text-secondaryColor text-center ease-linear duration-150 font-[600]"
@@ -164,7 +170,6 @@ const Contact = () => {
                   Send Message
                 </button>
               )}
-                <ReCAPTCHA sitekey={key} onChange={(value) => setCaptchaIsDone(value)} />
               {/* this message should disappear after a few sec!NB */}
               {success && (
                 <p className="text-primaryColor">Form submitted successfully, I'll be in touch!</p>
