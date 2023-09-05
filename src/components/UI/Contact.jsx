@@ -46,9 +46,11 @@ const Contact = () => {
       setMessage("");
 
       setSuccess(true);
+
       setTimeout(() => {
         setSuccess(false);
       }, 5000);
+
     } catch (error) {
       console.error("Error adding document: ", error);
     }
@@ -62,23 +64,27 @@ const Contact = () => {
             Get in touch
           </span>
         </h2>
-        <p className="text-secondaryColor dark:text-white mb-10 pt-5 text-center font-[500] text-[18px]">
-          <span className="text-primaryColor font-[800]">E-Mail: </span>
-          keenandeyce@gmail.com <br />
-          <br />
-          <span className="text-primaryColor font-[800]">Whatsapp: </span>
-          +27 66 216 1232 <br />
-          <br />
-          <span className="text-primaryColor font-[800]">LinkedIn: </span>
-          <a
-            className="hover:cursor-pointer hover:underline hover:text-primaryColor"
-            href="https://www.linkedin.com/in/keenan-deyce-5b9ab3219/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Keenan Deyce
-          </a>
-        </p>
+        <div className="grid grid-cols-3 mb-10 mt-10">
+          <p className="text-secondaryColor dark:text-white text-center font-semibold text-lg">
+            <span className="text-primaryColor font-bold">E-Mail: </span>
+            keenandeyce@gmail.com
+          </p>
+          <p className="text-secondaryColor dark:text-white text-center font-semibold text-lg">
+            <span className="text-primaryColor font-bold">Whatsapp: </span>
+            +27 66 216 1232
+          </p>
+          <p className="text-secondaryColor dark:text-white text-center font-semibold text-lg">
+            <span className="text-primaryColor font-bold">LinkedIn: </span>
+            <a
+              className="hover:cursor-pointer hover:underline hover:text-primaryColor"
+              href="https://www.linkedin.com/in/keenan-deyce-5b9ab3219/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Keenan Deyce
+            </a>
+          </p>
+        </div>
         <div className="md:flex justify-between items-center">
           <div
             data-aos="fade-right"
@@ -172,7 +178,6 @@ const Contact = () => {
                   </button>
                 )
               )}
-              {/* this message should disappear after a few sec!NB */}
               {success && (
                 <p className="text-primaryColor">Form submitted successfully, I'll be in touch!</p>
               )}
