@@ -10,9 +10,10 @@ const Contact = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState(false);
+  const [isEmailValid, setIsEmailValid] = useState(false);
   const [captchaIsDone, setCaptchaIsDone] = useState(null);
 
-  const isEmailValid = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const key = "6LfXXtMnAAAAAAwm1r3zNSHpqL9f1LflAfdDjirq";
 
   const handleSubmit = async (e) => {
@@ -23,14 +24,8 @@ const Contact = () => {
       return;
     }
 
-    if (!isEmailValid.test(email)) {
-      // Invalid email, don't submit
-      alert("Please enter a valid email.");
-      return;
-    }
-
     try {
-      axios.post('https://agile-colt-waistcoat.cyclic.app/email', {
+      await axios.post('https://agile-colt-waistcoat.cyclic.app/email', {
         fullName,
         email,
         subject,
@@ -50,6 +45,9 @@ const Contact = () => {
       setMessage("");
 
       setSuccess(true);
+      setTimeout(() => {
+        setSuccess(false);
+      }, 5000);
     } catch (error) {
       console.error("Error adding document: ", error);
     }
@@ -118,12 +116,22 @@ const Contact = () => {
                 <input
                   type="text"
                   placeholder="Enter your email"
-                  className="w-full p-3 focus:outline-none rounded-[5px] dark:bg-[#2b2d33] dark:text-white"
+                  className={`w-full p-3 focus:outline-none rounded-[5px] dark:bg-[#2b2d33] dark:text-white ${
+                    isEmailValid ? "" : "border-red-500"
+                  }`}
                   name="email"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => {
+                    const enteredEmail = e.target.value;
+                    setEmail(enteredEmail);
+                    setIsEmailValid(emailRegex.test(enteredEmail));
+                  }}
                   required
                 />
+                {/* This needs to not affect divs */}
+                {!isEmailValid && email.length > 0 && (
+                  <p className="text-red-500">Please enter a valid email.</p>
+                )}
               </div>
               <div className="mb-5">
                 <input
@@ -148,7 +156,7 @@ const Contact = () => {
                   required
                 />
               </div>
-              {captchaIsDone && (
+              {!captchaIsDone && (
                 <button
                   type="submit"
                   className="w-full p-3 focus:outline-none rounded-[10px] bg-primaryColor dark:bg-primaryColor text-white hover:bg-secondaryColor dark:hover:bg-white dark:hover:text-secondaryColor text-center ease-linear duration-150 font-[600]"
@@ -156,15 +164,10 @@ const Contact = () => {
                   Send Message
                 </button>
               )}
-              <div
-                className="mb-0"
-                style={{ visibility: captchaIsDone ? "hidden" : "visible" }}
-              >
                 <ReCAPTCHA sitekey={key} onChange={(value) => setCaptchaIsDone(value)} />
-              </div>
               {/* this message should disappear after a few sec!NB */}
               {success && (
-                <p className="text-primaryColor">Email sent successfully.</p>
+                <p className="text-primaryColor">Form submitted successfully, I'll be in touch!</p>
               )}
             </form>
           </div>

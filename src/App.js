@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import { Triangle } from 'react-loader-spinner';
 import "./App.css";
 import 'aos/dist/aos.css';
 import Aos from 'aos';
-import { Triangle } from 'react-loader-spinner';
-import { useMediaQuery } from 'react-responsive';
 import Header from './components/Header/Header.jsx';
 import Hero from './components/UI/Hero.jsx';
 import About from './components/UI/About.jsx';
