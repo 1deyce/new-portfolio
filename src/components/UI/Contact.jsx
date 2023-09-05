@@ -11,7 +11,7 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState(false);
   const [isEmailValid, setIsEmailValid] = useState(false);
-  const [captchaIsDone, setCaptchaIsDone] = useState(null);
+  const [captchaIsDone, setCaptchaIsDone] = useState(false);
 
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const key = "6LfXXtMnAAAAAAwm1r3zNSHpqL9f1LflAfdDjirq";
