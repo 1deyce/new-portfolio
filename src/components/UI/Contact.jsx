@@ -64,17 +64,17 @@ const Contact = () => {
             Get in touch
           </span>
         </h2>
-        <div className="grid grid-cols-3 mb-10 mt-10">
+        <div className="grid lg:grid-cols-3 grid-rows-3 mt-20">
           <p className="text-secondaryColor dark:text-white text-center font-semibold text-lg">
-            <span className="text-primaryColor font-bold">E-Mail: </span>
+            <span className="text-primaryColor font-[900]">E-Mail: </span>
             keenandeyce@gmail.com
           </p>
           <p className="text-secondaryColor dark:text-white text-center font-semibold text-lg">
-            <span className="text-primaryColor font-bold">Whatsapp: </span>
+            <span className="text-primaryColor font-[900]">Whatsapp: </span>
             +27 66 216 1232
           </p>
           <p className="text-secondaryColor dark:text-white text-center font-semibold text-lg">
-            <span className="text-primaryColor font-bold">LinkedIn: </span>
+            <span className="text-primaryColor font-[900]">LinkedIn: </span>
             <a
               className="hover:cursor-pointer hover:underline hover:text-primaryColor"
               href="https://www.linkedin.com/in/keenan-deyce-5b9ab3219/"
@@ -123,9 +123,7 @@ const Contact = () => {
                 <input
                   type="text"
                   placeholder="Enter your email"
-                  className={`w-full p-3 focus:outline-none rounded-[5px] dark:bg-[#2b2d33] dark:text-white ${
-                    isEmailValid ? "" : "border-red-500"
-                  }`}
+                  className="w-full p-3 focus:outline-none rounded-[5px] dark:bg-[#2b2d33] dark:text-white"
                   name="email"
                   value={email}
                   onChange={(e) => {
@@ -137,7 +135,7 @@ const Contact = () => {
                 />
                 {/* This needs to not affect divs */}
                 {!isEmailValid && email.length > 0 && (
-                  <p className="text-red-500">Please enter a valid email.</p>
+                  <p className="text-red-600 text-[14px]">Please enter a valid email.</p>
                 )}
               </div>
               <div className="mb-5">
@@ -164,7 +162,7 @@ const Contact = () => {
                 />
               </div>
               {!captchaIsDone ? (
-                <ReCAPTCHA sitekey={key} onChange={(value) => {
+                <ReCAPTCHA className="flex justify-center" sitekey={key} onChange={(value) => {
                   setCaptchaIsDone(value);
                   setShowSubmitButton(true);
                 }} />

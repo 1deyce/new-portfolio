@@ -56,7 +56,7 @@ const Portfolio = () => {
               <img src={Img} alt="" className="modal-image" />
               <button
                 onClick={closeModal}
-                className="absolute top-2 right-2 text-gray-300 hover:text-primaryColor text-[30px] hover:scale-125"
+                className="absolute top-0.5 right-3 text-gray-300 hover:text-primaryColor text-[30px] hover:scale-125"
               >
                 <span>&times;</span>
               </button>

@@ -42,7 +42,7 @@ function App() {
           />
         </div>
       ) : (
-        <div className={`min-h-screen ${isMobile ? 'overflow-x-hidden' : ''}`}>
+        <div className={`min-h-screen ${isMobile ? 'overflow-hidden' : ''}`}>
           <Header />
           <main />
           <Hero />

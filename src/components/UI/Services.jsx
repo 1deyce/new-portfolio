@@ -52,7 +52,7 @@ const Services = () => {
         <div className="flex justify-center items-center sm:py-12">
           <div className="w-full py-3 sm:px-0">
             <div className="relative antialiased text-sm font-semibold items-center">
-              <div className="mt-6 sm:mt-0 sm:mb-12 sm:flex flex-wrap justify-center items-center">
+              <div className="mt-6 sm:mt-0 sm:mb-12 sm:flex flex-wrap justify-center items-center xl:gap-10">
                 {/* ========== first card ========== */}
                 <div className="w-full sm:w-1/3 mb-4 sm:mb-0 sm:max-w-xs flex justify-center items-center">
                   <div
@@ -71,7 +71,6 @@ const Services = () => {
                     </p>
                   </div>
                 </div>
-
                 {/* ========== second card ========== */}
                 <div className="w-full sm:w-1/3 mb-4 sm:mb-0 sm:max-w-xs">
                   <div
@@ -90,7 +89,6 @@ const Services = () => {
                     </p>
                   </div>
                 </div>
-
                 {/* ========== third card ========== */}
                 <div className="img w-full sm:w-1/3 mb-4 sm:mb-0 sm:max-w-xs">
                   <div
