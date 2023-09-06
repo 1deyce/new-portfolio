@@ -14,7 +14,7 @@ const Contact = () => {
   const [captchaIsDone, setCaptchaIsDone] = useState(false);
   const [showSubmitButton, setShowSubmitButton] = useState(false);
 
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/u;
   const key = "6LfXXtMnAAAAAAwm1r3zNSHpqL9f1LflAfdDjirq";
 
   const handleSubmit = async (e) => {

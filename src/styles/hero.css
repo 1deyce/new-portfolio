@@ -8,16 +8,16 @@
 }
   
 .gradient {
-    --size: 200px;
-    --speed: 40s;
-    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
-  
-    width: var(--size);
-    height: var(--size);
-    filter: blur(calc(var(--size) / 1000));
-    background-image: linear-gradient(hsla(241, 82%, 57%, 0.85), hsl(192, 82%, 57%));
-    border-radius: 30% 70% 70% 30% / 30% 30% 80% 80%;
-    align-content: center;
+  --size: 200px;
+  --speed: 40s;
+  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+
+  width: var(--size);
+  height: var(--size);
+  filter: blur(calc(var(--size) / 1000));
+  background-image: linear-gradient(hsla(241, 82%, 57%, 0.85), hsl(192, 82%, 57%));
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  align-content: center;
 }
   
   @media (min-width: 720px) {
