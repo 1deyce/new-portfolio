@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
     entry: "./src/index.js",
     target: "web",
@@ -9,11 +7,6 @@ module.exports = {
             "crypto": false,
             "path": require.resolve("path-browserify"),
             "os": require.resolve("os-browserify/browser"),
-            // "crypto": require.resolve("crypto-browserify"),
         },
     },
-    path
-    // plugins: [
-    //     new NodePolyfillPlugin(),
-    // ],
 };

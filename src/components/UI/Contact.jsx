@@ -69,7 +69,7 @@ const Contact = () => {
             Get in touch
           </span>
         </h2>
-        <div className="grid lg:grid-cols-3 grid-rows-3 mt-20">
+        <div className="grid lg:grid-cols-3 grid-rows-3 mt-20 mb-20 lg:mb-0">
           <p className="text-secondaryColor dark:text-white text-center font-semibold text-lg">
             <span className="text-primaryColor font-[900]">E-Mail: </span>
             keenandeyce@gmail.com
@@ -178,7 +178,7 @@ const Contact = () => {
                     disabled={isLoading}
                     className="w-full p-3 focus:outline-none rounded-[10px] bg-primaryColor dark:bg-primaryColor text-white hover:bg-secondaryColor dark:hover:bg-white dark:hover:text-secondaryColor text-center ease-linear duration-150 font-[600]"
                   >
-                    {isLoading ? 'Please wait...' : 'Send Message'}
+                    {isLoading ? 'Submitting...' : 'Send Message'}
                   </button>
                 )
               )}

@@ -40,6 +40,7 @@ function App() {
             wrapperClassName=""
             visible={true}
           />
+          {/* <p className='text-primaryColor text-xl font-extrabold'>Loading...</p> */}
         </div>
       ) : (
         <div className={`min-h-screen ${isMobile ? 'overflow-hidden' : ''}`}>
