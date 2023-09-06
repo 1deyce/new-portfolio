@@ -13,6 +13,7 @@ const Contact = () => {
   const [isEmailValid, setIsEmailValid] = useState(false);
   const [captchaIsDone, setCaptchaIsDone] = useState(false);
   const [showSubmitButton, setShowSubmitButton] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/u;
   const key = "6LfXXtMnAAAAAAwm1r3zNSHpqL9f1LflAfdDjirq";
@@ -24,6 +25,8 @@ const Contact = () => {
       alert("Please complete the reCAPTCHA.")
       return;
     }
+
+    setIsLoading(true);
 
     try {
       await axios.post('https://agile-colt-waistcoat.cyclic.app/email', {
@@ -54,6 +57,8 @@ const Contact = () => {
     } catch (error) {
       console.error("Error adding document: ", error);
     }
+
+    setIsLoading(false);
   };
 
   return (
@@ -170,9 +175,10 @@ const Contact = () => {
                 showSubmitButton && (
                   <button
                     type="submit"
+                    disabled={isLoading}
                     className="w-full p-3 focus:outline-none rounded-[10px] bg-primaryColor dark:bg-primaryColor text-white hover:bg-secondaryColor dark:hover:bg-white dark:hover:text-secondaryColor text-center ease-linear duration-150 font-[600]"
                   >
-                    Send Message
+                    {isLoading ? 'Loading...' : 'Send Message'}
                   </button>
                 )
               )}
