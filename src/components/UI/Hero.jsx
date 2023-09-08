@@ -110,7 +110,7 @@ const Hero = () => {
             className="md:basis-1/2 flex sm:ml-0 text-center mt-10 flex-wrap gap-3 md:mt-0 md:flex-col justify-center md:text-end pl-20"
           >
             <figure className="flex items-center justify-center">
-              <img src={heroGif} alt="" className="mr-20 lg:mr-0 w-96 h-96" />
+              <img src={heroGif} alt="" className="mr-20 lg:mr-0 w-72 h-72" />
             </figure>
           </div>
           {/* Hero img */}

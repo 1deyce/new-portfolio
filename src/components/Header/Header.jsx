@@ -110,7 +110,7 @@ const Header = () => {
           >
             <ul
               className={`flex items-center justify-center gap-20 ${
-                isMobile ? "dark:bg-primaryColor" : ""
+                isMobile ? "dark:bg-secondaryColor" : ""
               }`}
             >
               <li>
