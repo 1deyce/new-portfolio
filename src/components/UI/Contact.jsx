@@ -3,6 +3,7 @@ import { collection, addDoc } from "firebase/firestore/lite";
 import { db } from "./firebaseConfig";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
+import "aos/dist/aos.css";
 
 const Contact = () => {
   const [fullName, setFullName] = useState("");
@@ -62,7 +63,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-white dark:bg-black pt-16 pb-20">
+    <section id="contact" className="bg-white dark:bg-black pt-24 pb-10">
       <div className="container">
         <h2 className="text-primaryColor dark:text-primaryColor font-[800] text-5xl mb-8 text-center">
           <span className="border-b-2 border-solid border-secondaryColor dark:border-white">

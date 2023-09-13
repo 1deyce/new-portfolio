@@ -3,6 +3,7 @@ import { useMediaQuery } from "react-responsive";
 import "../../index.css";
 import "../../App.css";
 import "../../styles/toggle.css";
+import "aos/dist/aos.css";
 
 const Header = () => {
   const headerRef = useRef(null);

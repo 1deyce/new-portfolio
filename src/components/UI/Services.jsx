@@ -30,7 +30,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="bg-white dark:bg-black pt-0">
+    <section id="services" className="bg-white dark:bg-black pt-16">
       <div className="container lg:pt-5">
         <div className="text-center">
           <h2 className="text-primaryColor dark:text-primaryColor font-[800] text-5xl mb-6">
@@ -58,7 +58,7 @@ const Services = () => {
                   <div
                     data-aos="fade-right"
                     data-aos-duration="1200"
-                    className="bg-white dark:bg-black p-4 rounded-md group cursor-pointer ease-in duration-150 h-full"
+                    className="bg-white dark:bg-black p-4 rounded-md group ease-in duration-150 h-full"
                   >
                     <h3 className="text-primaryColor font-[700] mb-2 mt-1 text-xl text-center">
                       Frontend Development
@@ -76,7 +76,7 @@ const Services = () => {
                   <div
                     data-aos="fade-up"
                     data-aos-duration="2000"
-                    className="bg-secondaryColor dark:bg-white p-4 rounded-xl group cursor-pointer ease-in duration-150 h-full"
+                    className="bg-secondaryColor dark:bg-white p-4 rounded-xl group ease-in duration-150 h-full"
                   >
                     <h3 className="text-white dark:text-secondaryColor font-[700] mb-2 mt-1 group-hover:text-white dark:group-hover:text-secondaryColor text-xl text-center">
                       UI/UX Design
@@ -94,7 +94,7 @@ const Services = () => {
                   <div
                     data-aos="fade-left"
                     data-aos-duration="1200"
-                    className="bg-white dark:bg-black p-4 rounded-xl group cursor-pointer ease-in duration-150 h-full"
+                    className="bg-white dark:bg-black p-4 rounded-xl group ease-in duration-150 h-full"
                   >
                     <h3 className="text-primaryColor font-[700] mb-2 mt-1 text-xl text-center">
                       Backend Development
