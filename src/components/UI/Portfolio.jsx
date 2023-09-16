@@ -50,10 +50,10 @@ const Portfolio = () => {
       <div
         data-aos="fade-down"
         data-aos-duration="1500"
-        className="mx-20 flex justify-around gap-0 flex-wrap"
+        className="mx-60 flex justify-around gap-0 flex-wrap"
       >
         {/* first card */}
-        <div className="max-w-sm bg-white dark:border-black rounded-2xl dark:bg-black hover:shadow-md">
+        <div className="max-w-sm bg-white dark:border-black rounded-2xl dark:bg-black hover:shadow-md mb-10">
           <img
             className="cursor-pointer hover:scale-110 transition duration-300 ease-in-out rounded-2xl pt-1 px-1"
             src={Img}
