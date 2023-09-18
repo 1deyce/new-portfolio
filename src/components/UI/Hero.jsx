@@ -83,7 +83,7 @@ const Hero = () => {
               <span className="animate-bounce">
                 <a
                   title="LinkedIn"
-                  href="https://www.linkedin.com/in/keenan-deyce-5b9ab3219/"
+                  href="https://www.linkedin.com/in/keenan-deyce"
                   target="_blank"
                   rel="noreferrer"
                   className="text-secondaryColor dark:text-primaryColor text-[20px] font-[500]"

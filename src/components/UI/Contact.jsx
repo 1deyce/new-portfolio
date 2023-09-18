@@ -83,7 +83,7 @@ const Contact = () => {
             <span className="text-primaryColor font-[900]">LinkedIn: </span>
             <a
               className="hover:cursor-pointer hover:underline hover:text-primaryColor"
-              href="https://www.linkedin.com/in/keenan-deyce-5b9ab3219/"
+              href="https://www.linkedin.com/in/keenan-deyce"
               target="_blank"
               rel="noreferrer"
             >

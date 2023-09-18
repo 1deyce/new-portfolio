@@ -33,7 +33,7 @@ const Footer = () => {
 
               <span className="w-[35px] h-[35px] bg-[#2b2d33] p-1 rounded-[50px] cursor-pointer text-center">
                 <a
-                  href="https://www.linkedin.com/in/keenan-deyce-5b9ab3219/"
+                  href="https://www.linkedin.com/in/keenan-deyce"
                   target="_blank"
                   rel="noreferrer"
                   className="text-gray-300 font-[500] text-[18px]"
