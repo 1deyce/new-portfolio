@@ -14,7 +14,9 @@ const Footer = () => {
               Do you want to make beautiful products ?
             </h2>
             <a href="#contact">
-              <button className="flex items-center gap-2 bg-primaryColor text-white font-[500] ease-in duration-300 py-2 px-4 rounded-[8px] hover:bg-white hover:text-secondaryColor">
+              <button 
+                className="flex items-center gap-2 bg-primaryColor text-white font-[500] ease-in duration-300 py-2 px-4 rounded-[8px] hover:bg-white hover:text-secondaryColor"
+              >
                 <i className="ri-mail-line"></i>Hire Me
               </button>
             </a>
