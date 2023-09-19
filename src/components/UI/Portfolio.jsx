@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "aos/dist/aos.css";
 import "../../styles/modal.css";
-import Img from "../../assets/images/portfolio-011.jpg";
+import Img from "../../assets/images/FWG.png";
 import Img1 from "../../assets/images/blogapp.png";
 import Modal from "react-modal";
 
@@ -53,9 +53,9 @@ const Portfolio = () => {
         className="mx-60 flex justify-around gap-0 flex-wrap"
       >
         {/* first card */}
-        <div className="max-w-sm bg-white dark:border-black rounded-2xl dark:bg-black hover:shadow-md mb-10">
+        <div className="max-w-sm bg-white dark:border-black rounded-2xl dark:bg-black hover:shadow-md">
           <img
-            className="cursor-pointer hover:scale-110 transition duration-300 ease-in-out rounded-2xl pt-1 px-1"
+            className="cursor-pointer w-full h-[210px] hover:scale-110 transition duration-300 ease-in-out rounded-lg pt-1 px-1"
             src={Img}
             alt=""
             onClick={openModal1}
@@ -85,13 +85,13 @@ const Portfolio = () => {
               React, Tailwind, CSS
             </p>
             <a
-              href="https://github.com/1deyce/Gym-website"
+              href="https://lighthearted-marigold-9a1a80.netlify.app"
               className="inline-flex items-center px-3 mx-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-black rounded-lg hover:bg-primaryColor hover:text-black focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-primaryColor dark:hover:text-white dark:focus:ring-blue-800"
               target="_blank"
               rel="noreferrer"
             >
-              Coming Soon...
-              {/* <svg
+              Live Site
+              <svg
                 className="w-3.5 h-3.5 ml-2"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +105,7 @@ const Portfolio = () => {
                   stroke-width="2"
                   d="M1 5h12m0 0L9 1m4 4L9 9"
                 />
-              </svg> */}
+              </svg>
             </a>
             <a
               href="https://github.com/1deyce/Gym-website"
@@ -135,7 +135,7 @@ const Portfolio = () => {
         {/* second card */}
         <div className="max-w-sm bg-white dark:border-black rounded-2xl dark:bg-black hover:shadow-md">
           <img
-            className="cursor-pointer hover:scale-110 transition duration-300 ease-in-out rounded-2xl pt-1 px-1"
+            className="cursor-pointer w-full h-[210px] hover:scale-110 transition duration-300 ease-in-out rounded-lg pt-1 px-1"
             src={Img1}
             alt=""
             onClick={openModal2}
