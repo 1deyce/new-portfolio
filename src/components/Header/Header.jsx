@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 const Header = () => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
-  const isMobile = useMediaQuery({ maxWidth: 768 }); //adjust breakpoint as needed
+  const isMobile = useMediaQuery({ maxWidth: 480 }); //adjust breakpoint as needed
 
   const stickyHeaderFunc = () => {
     window.addEventListener("scroll", () => {
