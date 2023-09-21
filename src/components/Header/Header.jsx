@@ -8,9 +8,21 @@ import "aos/dist/aos.css";
 const Header = () => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
-  const isMobile = useMediaQuery({ maxWidth: 480 }); //adjust breakpoint as needed
+  const [isOpen, setIsOpen] = useState(false);
+  const isMobile = useMediaQuery({ maxWidth: 480 });
 
-  const stickyHeaderFunc = () => {
+  const navLinks = [
+    { href: '#about', label: 'About' },
+    { href: '#services', label: 'Services' },
+    { href: '#portfolio', label: 'Work' },
+    { href: '#contact', label: 'Contact' },
+  ]
+
+  const navStyle = "text-black dark:text-white hover:text-primaryColor dark:hover:text-primaryColor font-[600]"
+
+  const menuClassName = `menu navbar pr-20 mx-auto ${isOpen ? "show__menu" : ""}`;
+
+  const stickyHeader = () => {
     window.addEventListener("scroll", () => {
       if (headerRef.current !== null) {
         if (
@@ -26,12 +38,12 @@ const Header = () => {
   };
 
   useEffect(() => {
-    stickyHeaderFunc();
+    stickyHeader();
 
-    return window.removeEventListener("scroll", stickyHeaderFunc);
+    return window.removeEventListener("scroll", stickyHeader);
   }, []);
 
-  const handleClick = (e) => {
+  const handleNavItemClick = (e) => {
     e.preventDefault();
 
     const targetAttr = e.target.getAttribute("href");
@@ -42,8 +54,6 @@ const Header = () => {
       left: 0,
     });
   };
-
-  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -85,7 +95,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* logo start */}
           <div className="flex items-center gap-[10]">
-            <a href="home">
+            <a href="/">
               <span className="w-[50px] h-[50px] text-white text-[30px] font-[500] bg-primaryColor rounded-full flex items-center text-center justify-center cursor-pointer border-black dark:border-white border-2">
                 K
               </span>
@@ -101,59 +111,23 @@ const Header = () => {
           </div>
           {/* logo end */}
 
-          {/* nav  start */}
-          <div
-            className={
-              `menu navbar pr-20 mx-auto ${isOpen ? "show__menu" : ""}`
-            }
-            ref={menuRef}
-            onClick={toggleMenu}
-          >
-            <ul
-              className={
-                `flex items-center justify-center gap-10 lg:gap-20 ${
-                  isMobile ? "dark:bg-secondaryColor" : "dark:bg-black"}`
-              }
+          {/* nav start */}
+          <div className={menuClassName} ref={menuRef} onClick={toggleMenu}>
+            <ul 
+              className={`flex items-center justify-center gap-10 lg:gap-20
+                ${isMobile ? "dark:bg-secondaryColor" : "dark:bg-black"}`}
             >
-              <li>
-                <a
-                  onClick={handleClick}
-                  className="text-black dark:text-white hover:text-primaryColor dark:hover:text-primaryColor font-[600]"
-                  href="#about"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  onClick={handleClick}
-                  className="text-black dark:text-white hover:text-primaryColor dark:hover:text-primaryColor font-[600]"
-                  href="#services"
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  onClick={handleClick}
-                  className="text-black dark:text-white hover:text-primaryColor dark:hover:text-primaryColor font-[600]"
-                  href="#portfolio"
-                >
-                  Work
-                </a>
-              </li>
-              <li>
-                <a
-                  onClick={handleClick}
-                  className="text-black dark:text-white hover:text-primaryColor dark:hover:text-primaryColor font-[600]"
-                  href="#contact"
-                >
-                  Contact
-                </a>
-              </li>
+              {navLinks.map((item) => {
+                return <li key={item.href}>
+                  <a onClick={handleNavItemClick} className={navStyle} href={item.href}>
+                    {item.label}
+                  </a>
+                </li>
+              })}  
             </ul>
           </div>
           {/* nav end */}
+
 
           {/* toggle start */}
           <label className="switch">

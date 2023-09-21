@@ -63,7 +63,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-white dark:bg-black pt-24 pb-10">
+    <section
+      id="contact" 
+      className="bg-white dark:bg-black pt-24 pb-10"
+    >
       <div className="container">
         <h2 className="text-primaryColor dark:text-primaryColor font-[800] text-5xl mb-8 text-center">
           <span className="border-b-2 border-solid border-secondaryColor dark:border-white">
@@ -101,7 +104,7 @@ const Contact = () => {
             <iframe
               title="google-maps"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423812.32927425334!2d18.326422855396498!3d-33.91452907067648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc500f8826eed7%3A0x687fe1fc2828aa87!2sCape%20Town!5e0!3m2!1sen!2sza!4v1682582910036!5m2!1sen!2sza"
-              className="border-0 w-full h-full md:rounded-l-2xl rounded-2xl"
+              className="border-0 w-full h-full rounded-2xl"
               allowFullScreen=""
               loading="eager"
               referrerPolicy="no-referrer-when-downgrade"
@@ -113,7 +116,10 @@ const Contact = () => {
             data-aos-duration="1000"
             className="w-full mt-8 md:mt-0 md:w-1/2 sm:h-[450px] lg:flex items-center bg-[#cfeeff] dark:bg-black px-4 lg:px-8 py-8 rounded-xl md:rounded-r-xl"
           >
-            <form onSubmit={handleSubmit} className="w-full">
+            <form 
+              onSubmit={handleSubmit} 
+              className="w-full"
+            >
               <div className="mb-5">
                 <input
                   type="text"
@@ -168,10 +174,14 @@ const Contact = () => {
                 />
               </div>
               {!captchaIsDone ? (
-                <ReCAPTCHA className="flex justify-center" sitekey={key} onChange={(value) => {
-                  setCaptchaIsDone(value);
-                  setShowSubmitButton(true);
-                }} />
+                <ReCAPTCHA 
+                  className="flex justify-center" 
+                  sitekey={key} 
+                  onChange={(value) => {
+                    setCaptchaIsDone(value);
+                    setShowSubmitButton(true);
+                  }} 
+                />
               ) : (
                 showSubmitButton && (
                   <button

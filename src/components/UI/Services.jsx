@@ -124,7 +124,7 @@ const Services = () => {
                     <img
                       className="h-10 w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 xl:h-14 xl:w-14"
                       src={image}
-                      alt={image.description}
+                      alt={image.url}
                       loading="lazy"
                     />
                   </div>

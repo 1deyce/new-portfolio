@@ -42,7 +42,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    background: beige;
+    background: #007ced;
     z-index: 100;
     display: none;
   }
