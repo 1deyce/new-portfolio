@@ -110,8 +110,8 @@ const Header = () => {
             onClick={toggleMenu}
           >
             <ul
-              className={`flex items-center justify-center gap-20 ${
-                isMobile ? "dark:bg-secondaryColor" : ""
+              className={`flex items-center justify-center gap-10 lg:gap-20 ${
+                isMobile ? "dark:bg-secondaryColor" : "dark:bg-secondaryColor"
               }`}
             >
               <li>
