@@ -103,16 +103,17 @@ const Header = () => {
 
           {/* nav  start */}
           <div
-            className={`menu navbar pr-20 mx-auto ${
-              isOpen ? "show__menu" : ""
-            }`}
+            className={
+              `menu navbar pr-20 mx-auto ${isOpen ? "show__menu" : ""}`
+            }
             ref={menuRef}
             onClick={toggleMenu}
           >
             <ul
-              className={`flex items-center justify-center gap-10 lg:gap-20 ${
-                isMobile ? "dark:bg-secondaryColor" : "dark:bg-black"
-              }`}
+              className={
+                `flex items-center justify-center gap-10 lg:gap-20 ${
+                  isMobile ? "dark:bg-secondaryColor" : "dark:bg-black"}`
+              }
             >
               <li>
                 <a
@@ -185,7 +186,6 @@ const Header = () => {
               <i className="ri-menu-line"></i>
             </span>
           </div>
-
           {/* hamburgermenu end */}
         </div>
       </div>

@@ -118,7 +118,7 @@ const Services = () => {
               {images.concat(images).map((image, index) => {
                 return (
                   <div
-                    key={image.id}
+                    key={index}
                     className="flex justify-center items-start w-full"
                   >
                     <img
