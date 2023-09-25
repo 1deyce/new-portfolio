@@ -82,7 +82,7 @@ const Portfolio = () => {
               Fitness Trainer Website
             </h5>
             <p className="mb-3 font-normal text-secondaryColor dark:text-white">
-              React, Tailwind, CSS
+              React, Tailwind CSS
             </p>
             <a
               href="https://lighthearted-marigold-9a1a80.netlify.app"

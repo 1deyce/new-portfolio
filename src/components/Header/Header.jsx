@@ -9,7 +9,7 @@ const Header = () => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
-  const isMobile = useMediaQuery({ maxWidth: 480 });
+  const isMenuActive = useMediaQuery({ maxWidth: 768 });
 
   const navLinks = [
     { href: '#about', label: 'About' },
@@ -115,11 +115,15 @@ const Header = () => {
           <div className={menuClassName} ref={menuRef} onClick={toggleMenu}>
             <ul 
               className={`flex items-center justify-center gap-10 lg:gap-20
-                ${isMobile ? "dark:bg-secondaryColor" : "dark:bg-black"}`}
+                ${isMenuActive ? "dark:bg-secondaryColor" : ""}`}
             >
               {navLinks.map((item) => {
                 return <li key={item.href}>
-                  <a onClick={handleNavItemClick} className={navStyle} href={item.href}>
+                  <a 
+                    onClick={handleNavItemClick} 
+                    className={navStyle} 
+                    href={item.href}
+                  >
                     {item.label}
                   </a>
                 </li>

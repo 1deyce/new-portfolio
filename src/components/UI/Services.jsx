@@ -100,7 +100,7 @@ const Services = () => {
                       Backend Development
                     </h3>
                     <p className="text-[15px] text-smallTextColor dark:text-white dark:group-hover:text-white leading-7 text-center">
-                      With expertise in server-side programming languages,
+                      With my limited but valuable experience in server-side programming languages,
                       databases, and frameworks, I can build robust back-end
                       systems to power your software applications and websites.
                     </p>

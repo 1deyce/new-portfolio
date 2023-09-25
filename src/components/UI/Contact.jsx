@@ -19,7 +19,7 @@ const Contact = () => {
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/u;
   const key = "6LfXXtMnAAAAAAwm1r3zNSHpqL9f1LflAfdDjirq";
 
-  const handleSubmit = async (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
 
     if (!captchaIsDone) {
@@ -117,7 +117,7 @@ const Contact = () => {
             className="w-full mt-8 md:mt-0 md:w-1/2 sm:h-[450px] lg:flex items-center bg-[#cfeeff] dark:bg-black px-4 lg:px-8 py-8 rounded-xl md:rounded-r-xl"
           >
             <form 
-              onSubmit={handleSubmit} 
+              onSubmit={handleFormSubmit} 
               className="w-full"
             >
               <div className="mb-5">
@@ -145,7 +145,6 @@ const Contact = () => {
                   }}
                   required
                 />
-                {/* This needs to not affect divs */}
                 {!isEmailValid && email.length > 0 && (
                   <p className="text-red-600 text-[14px]">Please enter a valid email.</p>
                 )}

@@ -13,7 +13,7 @@ import Contact from './components/UI/Contact';
 import Footer from './components/Footer/Footer';
 
 function App() {
-  const isMobile = useMediaQuery({ maxWidth: 640 });
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   const [isloading, setIsLoading] = useState(true);
 
   useEffect(() => {
