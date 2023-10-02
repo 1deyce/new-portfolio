@@ -3,11 +3,13 @@ import "aos/dist/aos.css";
 import "../../styles/modal.css";
 import Img from "../../assets/images/FWG.png";
 import Img1 from "../../assets/images/blogapp.png";
+import Img2 from "../../assets/images/bankapp.png";
 import Modal from "react-modal";
 
 const Portfolio = () => {
   const [isModalOpen1, setIsModalOpen1] = useState(false);
   const [isModalOpen2, setIsModalOpen2] = useState(false);
+  const [isModalOpen3, setIsModalOpen3] = useState(false);
 
   useEffect(() => {
     Modal.setAppElement("#root");
@@ -27,6 +29,14 @@ const Portfolio = () => {
 
   const closeModal2 = () => {
     setIsModalOpen2(false);
+  };
+
+  const openModal3 = () => {
+    setIsModalOpen3(true);
+  };
+
+  const closeModal3 = () => {
+    setIsModalOpen3(false);
   };
 
   return (
@@ -56,21 +66,21 @@ const Portfolio = () => {
         <div className="max-w-sm bg-white dark:border-black rounded-2xl dark:bg-black hover:shadow-md">
           <img
             className="cursor-pointer w-full h-[210px] hover:scale-110 transition duration-300 ease-in-out rounded-lg pt-1 px-1"
-            src={Img}
+            src={Img2}
             alt=""
-            onClick={openModal1}
+            onClick={openModal3}
           />
           <Modal
-            isOpen={isModalOpen1}
-            onRequestClose={closeModal1}
+            isOpen={isModalOpen3}
+            onRequestClose={closeModal3}
             contentLabel="Image Modal"
             className="modal bg-black"
             overlayClassName="modal-overlay"
           >
             <div className="modal-content">
-              <img src={Img} alt="" className="modal-image" />
+              <img src={Img2} alt="" className="modal-image" />
               <button
-                onClick={closeModal1}
+                onClick={closeModal3}
                 className="absolute top-0.5 right-3 text-gray-300 hover:text-primaryColor text-[30px] hover:scale-125"
               >
                 <span>&times;</span>
@@ -79,36 +89,13 @@ const Portfolio = () => {
           </Modal>
           <div className="p-5 text-center">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-primaryColor dark:text-primaryColor">
-              Fitness Trainer Website
+              Basic Banking App
             </h5>
             <p className="mb-3 font-normal text-secondaryColor dark:text-white">
-              React, Tailwind CSS
+              Python, Flask, HTML
             </p>
             <a
-              href="https://lighthearted-marigold-9a1a80.netlify.app"
-              className="inline-flex items-center px-3 mx-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-black rounded-lg hover:bg-primaryColor hover:text-black focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-primaryColor dark:hover:text-white dark:focus:ring-blue-800"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Live Site
-              <svg
-                className="w-3.5 h-3.5 ml-2"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
-                />
-              </svg>
-            </a>
-            <a
-              href="https://github.com/1deyce/Gym-website"
+              href="https://github.com/1deyce/BankApp-flask"
               className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-black rounded-lg hover:bg-primaryColor hover:text-black focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-primaryColor dark:hover:text-white dark:focus:ring-blue-800"
               target="_blank"
               rel="noreferrer"
@@ -189,6 +176,86 @@ const Portfolio = () => {
             </a>
             <a
               href="https://github.com/1deyce/modern-blog-app/tree/main/cms_blog"
+              className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-black rounded-lg hover:bg-primaryColor hover:text-black focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-primaryColor dark:hover:text-white dark:focus:ring-blue-800"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Source Code
+              <svg
+                className="w-3.5 h-3.5 ml-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        {/* third card */}
+        <div className="max-w-sm bg-white dark:border-black rounded-2xl dark:bg-black hover:shadow-md">
+          <img
+            className="cursor-pointer w-full h-[210px] hover:scale-110 transition duration-300 ease-in-out rounded-lg pt-1 px-1"
+            src={Img}
+            alt=""
+            onClick={openModal1}
+          />
+          <Modal
+            isOpen={isModalOpen1}
+            onRequestClose={closeModal1}
+            contentLabel="Image Modal"
+            className="modal bg-black"
+            overlayClassName="modal-overlay"
+          >
+            <div className="modal-content">
+              <img src={Img} alt="" className="modal-image" />
+              <button
+                onClick={closeModal1}
+                className="absolute top-0.5 right-3 text-gray-300 hover:text-primaryColor text-[30px] hover:scale-125"
+              >
+                <span>&times;</span>
+              </button>
+            </div>
+          </Modal>
+          <div className="p-5 text-center">
+            <h5 className="mb-2 text-2xl font-bold tracking-tight text-primaryColor dark:text-primaryColor">
+              Fitness Trainer Website
+            </h5>
+            <p className="mb-3 font-normal text-secondaryColor dark:text-white">
+              React, Tailwind CSS
+            </p>
+            <a
+              href="https://lighthearted-marigold-9a1a80.netlify.app"
+              className="inline-flex items-center px-3 mx-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-black rounded-lg hover:bg-primaryColor hover:text-black focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-primaryColor dark:hover:text-white dark:focus:ring-blue-800"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Live Site
+              <svg
+                className="w-3.5 h-3.5 ml-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://github.com/1deyce/Gym-website"
               className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-black rounded-lg hover:bg-primaryColor hover:text-black focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-primaryColor dark:hover:text-white dark:focus:ring-blue-800"
               target="_blank"
               rel="noreferrer"
