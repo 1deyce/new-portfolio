@@ -30,7 +30,7 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
-      await axios.post('https://agile-colt-waistcoat.cyclic.app/email', {
+      await axios.post('https://whateveriwanttocallit.onrender.com/email', {
         fullName,
         email,
         subject,
