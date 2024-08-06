@@ -13,20 +13,26 @@ import figma from "../../assets/images/figma.png";
 import git from "../../assets/images/git.png";
 import github from "../../assets/images/github.png";
 import firebase from "../../assets/images/firebase.png";
+import vue from "../../assets/images/vue-js.svg";
+import mongo from "../../assets/images/mongo-db.png";
+import aws from "../../assets/images/aws.svg";
 
 const Services = () => {
   const images = [
     html,
     css,
     js,
+    mongo,
     node,
     react,
+    vue,
     tailwind,
     figma,
     python,
     git,
     github,
     firebase,
+    aws
   ];
 
   return (
@@ -100,7 +106,7 @@ const Services = () => {
                       Backend Development
                     </h3>
                     <p className="text-[15px] text-smallTextColor dark:text-white dark:group-hover:text-white leading-7 text-center">
-                      With my limited but valuable experience in server-side programming languages,
+                      With my experience in server-side programming languages,
                       databases, and frameworks, I can build robust back-end
                       systems to power your software applications and websites.
                     </p>

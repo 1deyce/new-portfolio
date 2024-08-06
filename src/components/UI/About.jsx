@@ -14,7 +14,7 @@ const About = () => {
         data-aos-duration="1500"
         className="container flex justify-center transform transition ease-in duration-500 mb-7"
       >
-        <div className="bg-secondaryColor dark:bg-gray-100 w-[660px] md:h-[270px] mt-20 pb-10 rounded-[30px] shadow-md dark:shadow-md shadow-black">
+        <div className="bg-secondaryColor dark:bg-gray-100 w-[660px] md:h-[240px] mt-20 pb-10 rounded-[30px] shadow-md dark:shadow-md shadow-black">
           <h1 className="text-white dark:text-secondaryColor text-center px-10 pt-7 pb-3 font-[700] text-4xl underline-offset-8 underline decoration-2">
             Education
           </h1>
@@ -49,22 +49,6 @@ const About = () => {
             >
               CapaCiTi (UVU Africa)
             </a>
-            <br />
-            <br />
-            <span className="pr-1.5 text-primaryColor">
-              <i className="ri-box-3-fill"></i>
-            </span>
-            Jul 2023 - Present : Student Software Engineer{" "}
-            <span className="text-primaryColor">@ </span>
-            <a
-              className="hover:text-primaryColor"
-              title="ALX"
-              href="https://www.linkedin.com/company/alx-africa-sa/mycompany/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              ALX Africa
-            </a>
           </p>
         </div>
       </div>
@@ -74,7 +58,7 @@ const About = () => {
         data-aos-duration="1500"
         className="container flex justify-center transform transition ease-in duration-500"
       >
-        <div className="bg-secondaryColor dark:bg-gray-100 w-[660px] md:h-[200px] mt-10 pb-10 rounded-[30px] cursor-pointer shadow-md dark:shadow-md shadow-black">
+        <div className="bg-secondaryColor dark:bg-gray-100 w-[660px] md:h-[260px] mt-10 pb-10 rounded-[30px] cursor-pointer shadow-md dark:shadow-md shadow-black">
           <h1 className="text-white dark:text-secondaryColor text-center px-10 pt-7 pb-3 font-[700] text-4xl underline-offset-8 underline decoration-2">
             Experience
           </h1>
@@ -98,7 +82,7 @@ const About = () => {
             <span className="pr-1.5 text-primaryColor">
               <i className="ri-box-3-fill"></i>
             </span>
-            Jul 2023 - Present : Junior Software Developer{" "}
+            Jul 2023 - Jan 2024 : Junior Software Developer{" "}
             <span className="text-primaryColor">@ </span>
             <a
               className="hover:text-primaryColor"
@@ -108,6 +92,22 @@ const About = () => {
               rel="noreferrer"
             >
               Younglings Africa
+            </a>
+            <br />
+            <br />
+            <span className="pr-1.5 text-primaryColor">
+              <i className="ri-box-3-fill"></i>
+            </span>
+            Feb 2024 - July 2024 : AWS Developer Associate{" "}
+            <span className="text-primaryColor">@ </span>
+            <a
+              className="hover:text-primaryColor"
+              title="Absa"
+              href="https://www.linkedin.com/company/absa/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Absa Group
             </a>
           </p>
         </div>
